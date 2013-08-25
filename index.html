@@ -1,7 +1,15 @@
 ---
 layout: default
 title: overview
+avatar:
+  privat:  http://www.gravatar.com/avatar/1cdf632360a3bbd00dcf94268c9b6c12.png
+  size: 200
 ---
-<strong>test</strong>
-<span>tetst</span>
-{% include footer.html %}
+
+<section class="align-center">
+  <img class="avatar avatar-highlight" src="{{ page.avatar.privat }}?s={{ page.avatar.size }}" alt="avatar for privat">
+  <h1 >Hi, i'm a software developer with the passion for design</h1>
+</section>
+<blockquote class="quote quote-highlight quote-fixed align-center">Even the greatest features are useless, without an awesome user experience!</blockquote>
+<a href="{{ site.url }}/curriculum_vitae" class="btn btn-highlight">Get more informations about me</a>
+<a href="{{ site.url }}/portfolio" class="btn btn-highlight">See some of my public available projects</a>

@@ -1,0 +1,9 @@
+@import "base";
+@import "layout";
+
+body {
+  background-color: $color-base;
+  > section {
+    padding-top: 2rem;
+  }
+}

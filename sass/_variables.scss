@@ -1,0 +1,48 @@
+// Color
+$color-base: rgba(97, 204, 97, 1);
+$color-highlight-light: rgba(255, 152, 26, 1);
+$color-highlight-dark: rgba(47, 51, 0, 1);
+
+$color-text-dark: rgba(34, 34, 34, 1);
+$color-text-light: rgba(253, 247, 248, 1);
+
+// Font
+$font-family: "Lato", sans-serif;
+$font-weight-thin: 100;
+$font-weight-normal: 300;
+$font-weight-bold: 400;
+
+$font-unit: px;
+
+// Font Sizes for different screen widths
+// $font-size-base: 15;
+$font-size-phone: 13;
+$font-size-phone-wide: 15;
+$font-size-tablet: 17;
+$font-size-tablet-wide: 19;
+$font-size-desktop: 19;
+$font-size-desktop-wide: 21;
+$font-size-desktop-widest: 23;
+
+// Font factors for different text places
+$font-factor-text-small: 0.8;
+$font-factor-text: 1;
+$font-factor-text-headline-sub: 1.25;
+$font-factor-text-headline: 1.6;
+$font-factor-text-title: 2.6;
+
+@mixin font-media ($factor: $font-factor-text, $line-height: false) {
+  @media (min-width: 320px) and (max-width: 479px) { @include font-calc($font-size-phone, $factor, $line-height); }
+  @media (min-width: 480px) and (max-width: 768px) { @include font-calc($font-size-phone-wide, $factor, $line-height); }
+  @media (min-width: 769px) and (max-width: 1024px) { @include font-calc($font-size-tablet, $factor, $line-height); }
+  @media (min-width: 1025px) and (max-width: 1280px) { @include font-calc($font-size-tablet-wide, $factor, $line-height); }
+  @media (min-width: 1281px) and (max-width: 1640px) { @include font-calc($font-size-desktop, $factor, $line-height); }
+  @media (min-width: 1641px) and (max-width: 1920px) { @include font-calc($font-size-desktop-wide, $factor, $line-height); }
+  @media (min-width: 1921px) { @include font-calc($font-size-desktop-widest, $factor, $line-height); }
+}
+
+@mixin font-calc($size, $factor, $line-height, $unit: $font-unit) {
+  font-size: round($size*$factor)#{$unit};
+  @if $line-height { line-height: round($size*1.6)#{$unit}; }
+  @else { line-height: 1em; }
+}

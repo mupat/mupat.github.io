@@ -1,0 +1,344 @@
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  src: local("Lato Hairline"), local("Lato-Hairline"), url("../fonts/lato/Lato-Hairline.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Lato Light"), local("Lato-Light"), url("../fonts/lato/Lato-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Lato Regular"), local("Lato-Regular"), url("../fonts/lato/Lato-Regular.woff") format("woff");
+}
+
+/* line 5, ../sass/_base.scss */
+html {
+  font-family: "Lato", sans-serif;
+  font-size: 62.5%;
+  vertical-align: baseline;
+}
+
+/* line 14, ../sass/_base.scss */
+body {
+  font-weight: 300;
+  color: #222222;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  /* line 14, ../sass/_base.scss */
+  body {
+    font-size: 13px;
+    line-height: 21px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  /* line 14, ../sass/_base.scss */
+  body {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* line 14, ../sass/_base.scss */
+  body {
+    font-size: 17px;
+    line-height: 27px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* line 14, ../sass/_base.scss */
+  body {
+    font-size: 19px;
+    line-height: 30px;
+  }
+}
+@media (min-width: 1281px) and (max-width: 1640px) {
+  /* line 14, ../sass/_base.scss */
+  body {
+    font-size: 19px;
+    line-height: 30px;
+  }
+}
+@media (min-width: 1641px) and (max-width: 1920px) {
+  /* line 14, ../sass/_base.scss */
+  body {
+    font-size: 21px;
+    line-height: 34px;
+  }
+}
+@media (min-width: 1921px) {
+  /* line 14, ../sass/_base.scss */
+  body {
+    font-size: 23px;
+    line-height: 37px;
+  }
+}
+
+/* line 22, ../sass/_base.scss */
+h1 {
+  font-weight: 100;
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  /* line 22, ../sass/_base.scss */
+  h1 {
+    font-size: 21px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  /* line 22, ../sass/_base.scss */
+  h1 {
+    font-size: 24px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* line 22, ../sass/_base.scss */
+  h1 {
+    font-size: 27px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* line 22, ../sass/_base.scss */
+  h1 {
+    font-size: 30px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1281px) and (max-width: 1640px) {
+  /* line 22, ../sass/_base.scss */
+  h1 {
+    font-size: 30px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1641px) and (max-width: 1920px) {
+  /* line 22, ../sass/_base.scss */
+  h1 {
+    font-size: 34px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1921px) {
+  /* line 22, ../sass/_base.scss */
+  h1 {
+    font-size: 37px;
+    line-height: 1em;
+  }
+}
+
+/* line 27, ../sass/_base.scss */
+h2 {
+  font-weight: 300;
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  /* line 27, ../sass/_base.scss */
+  h2 {
+    font-size: 16px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  /* line 27, ../sass/_base.scss */
+  h2 {
+    font-size: 19px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* line 27, ../sass/_base.scss */
+  h2 {
+    font-size: 21px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* line 27, ../sass/_base.scss */
+  h2 {
+    font-size: 24px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1281px) and (max-width: 1640px) {
+  /* line 27, ../sass/_base.scss */
+  h2 {
+    font-size: 24px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1641px) and (max-width: 1920px) {
+  /* line 27, ../sass/_base.scss */
+  h2 {
+    font-size: 26px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1921px) {
+  /* line 27, ../sass/_base.scss */
+  h2 {
+    font-size: 29px;
+    line-height: 1em;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+  /* line 32, ../sass/_base.scss */
+  p {
+    font-size: 13px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  /* line 32, ../sass/_base.scss */
+  p {
+    font-size: 15px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* line 32, ../sass/_base.scss */
+  p {
+    font-size: 17px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* line 32, ../sass/_base.scss */
+  p {
+    font-size: 19px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1281px) and (max-width: 1640px) {
+  /* line 32, ../sass/_base.scss */
+  p {
+    font-size: 19px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1641px) and (max-width: 1920px) {
+  /* line 32, ../sass/_base.scss */
+  p {
+    font-size: 21px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1921px) {
+  /* line 32, ../sass/_base.scss */
+  p {
+    font-size: 23px;
+    line-height: 1em;
+  }
+}
+
+/* line 3, ../sass/_layout.scss */
+.align-center {
+  text-align: center;
+}
+
+/* line 7, ../sass/_layout.scss */
+.quote {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 100;
+  padding: 3rem 1rem;
+  margin: 0;
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  /* line 7, ../sass/_layout.scss */
+  .quote {
+    font-size: 34px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  /* line 7, ../sass/_layout.scss */
+  .quote {
+    font-size: 39px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* line 7, ../sass/_layout.scss */
+  .quote {
+    font-size: 44px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* line 7, ../sass/_layout.scss */
+  .quote {
+    font-size: 49px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1281px) and (max-width: 1640px) {
+  /* line 7, ../sass/_layout.scss */
+  .quote {
+    font-size: 49px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1641px) and (max-width: 1920px) {
+  /* line 7, ../sass/_layout.scss */
+  .quote {
+    font-size: 55px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1921px) {
+  /* line 7, ../sass/_layout.scss */
+  .quote {
+    font-size: 60px;
+    line-height: 1em;
+  }
+}
+
+/* line 15, ../sass/_layout.scss */
+.quote-highlight {
+  display: block;
+  width: 100%;
+  background-color: #2f3300;
+  color: #fdf7f8;
+}
+
+/* line 22, ../sass/_layout.scss */
+.quote-fixed {
+  position: fixed;
+  bottom: 3rem;
+}
+
+/* line 27, ../sass/_layout.scss */
+.avatar {
+  width: 20rem;
+  height: 20rem;
+}
+
+/* line 32, ../sass/_layout.scss */
+.avatar-highlight {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/* line 4, ../sass/overview.scss */
+body {
+  background-color: #61cc61;
+}
+/* line 6, ../sass/overview.scss */
+body > section {
+  padding-top: 2rem;
+}

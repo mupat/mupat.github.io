@@ -6,9 +6,10 @@
 
   <title>Mupat - {{ page.title }}</title>
 
-  <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="{{ site.url }}/css/{{ page.title }}.css" type="text/css" media="screen, projection" />
 </head>
 <body>
   {{ content }}
+  {% include footer.html %}
 </body>
 </html>

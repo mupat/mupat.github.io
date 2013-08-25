@@ -1,4 +1,34 @@
-@import "compass/reset";
+@import "variables";
+@import "mixin";
+@import "font";
 
-strong { color: red; }
-span { color: green; }
+html {
+  // -webkit-font-smoothing: antialiased;
+  font: {
+    family: $font-family;
+    size: 62.5%; // normalize 1rem to 10px
+  }
+  vertical-align: baseline;
+}
+
+body {
+  font-weight: $font-weight-normal;
+  color: $color-text-dark;
+  margin: 0;
+  padding: 0;
+  @include font-media($font-factor-text, true);
+}
+
+h1 {
+  @include font-media($font-factor-text-headline);
+  font-weight: $font-weight-thin;
+}
+
+h2 {
+  @include font-media($font-factor-text-headline-sub);
+  font-weight: $font-weight-normal;
+}
+
+p {
+  @include font-media($font-factor-text);
+}
