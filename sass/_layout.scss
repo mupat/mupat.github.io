@@ -5,7 +5,7 @@
 }
 
 .quote {
-  @include font-media($font-factor-text-title);
+  @include font-media($font-factor-text-headline);
   @include box-sizing(border-box);
   font-weight: $font-weight-thin;
   padding: 3rem 1rem;
@@ -31,4 +31,167 @@
 
 .avatar-highlight { 
   @include border-radius(50%);
+}
+
+.btn {
+  background: $color-text-light;
+  padding: 1rem 0.5rem;
+  width: 25%;
+  display: block;
+  margin: 5rem auto;
+  min-width: 25rem;
+  @include font-media($font-factor-text-headline-sub);
+}
+
+.btn-highlight {
+  color: $color-text-light;
+  background-color: $color-highlight-light;
+  &:hover { background-color: $color-highlight-dark; }
+  font-weight: $font-weight-thin;
+}
+
+.btn-highlight-invert {
+  background-color: $color-highlight-dark;
+  &:hover { background-color: $color-highlight-light; }
+}
+
+.btn-down {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    left: calc(50% - 30px);
+    color: $color-highlight-dark;
+    font-size: 60px;
+    opacity: 0;
+    bottom: -4rem;
+    z-index: -1;
+    @include transition-property(opacity, color);
+    @include transition-duration(0.5s);
+  }
+  &:hover:before { 
+    opacity: 1; 
+    color: $color-highlight-light;
+  }
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+}
+
+.page-highlight {
+  background-color: $color-highlight-dark;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.nav-button {
+  cursor: pointer;
+  position: absolute;
+  font-size: 5rem;
+  bottom: -5rem;
+  background-color: $color-text-light;
+  z-index: 15;
+  width: 10rem;
+  height: 10rem;
+  left: calc(50% - 5rem);
+  border-radius: 50%;
+
+  &:before {
+    position: absolute;
+    top: 1rem;
+    left: 3.5rem;
+    font-size: 3rem;
+  }
+}
+
+.nav-overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  opacity: 0;
+  @include transition(opacity 0.3s ease);
+}
+
+.nav-input { 
+  display: none; 
+  &:checked {
+    +.nav-button:before { content: '\e00e'; }
+    ~.nav-wrapper { 
+      @include scale(1.0); 
+      bottom: -0.5rem;
+    }
+    ~.nav-overlay { opacity: 1; }
+  }
+}
+
+.nav-wrapper {
+  position: absolute;
+  height: 16rem;
+  width: 100%;
+  overflow: hidden;
+  z-index: 10;
+  bottom: -7.25rem;
+  border-radius: 50%;
+  @include scale(0.1);
+  @include transition-property(scale, bottom);
+  @include transition-duration(0.3s);
+
+  li {
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    @include transform-origin(100%, 100%);
+    overflow: hidden;
+    left: calc(50% - 30rem);
+    bottom: 0;
+    @include transition(border 0.3s ease);
+
+    &:first-child {
+      @include transform(rotate(-5deg) skew(50deg));
+    }
+     
+     &:nth-child(2) {
+       @include transform(rotate(33deg) skew(50deg));
+    }
+     
+    &:nth-child(3) {
+       @include transform(rotate(70deg) skew(50deg));
+    }
+     
+    &:nth-child(4) {
+       @include transform(rotate(110deg) skew(50deg));
+    }
+     
+    &:nth-child(5) {
+       @include transform(rotate(145deg) skew(50deg));
+    }
+     
+    a { 
+      background-color: $color-highlight-dark;
+      &:hover { background-color: transparentize($color-highlight-dark, 0.1); }
+      @include font-media($font-factor-text-title);
+      height: 30rem;
+      width: 30rem;
+      position: absolute;
+      bottom: -16rem;
+      right: -15rem;
+      border-radius: 50%;
+      text-decoration: none;
+      color: $color-text-light;
+      padding-top: 1.8rem;
+      text-align: center;
+      @include transform(skew(-50deg) rotate(-70deg) scale(1));
+      @include transition(opacity 0.3s, color 0.3s, background-color 0.3s);
+    }
+  }
 }

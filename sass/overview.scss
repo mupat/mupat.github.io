@@ -1,9 +1,47 @@
 @import "base";
 @import "layout";
 
-body {
-  background-color: $color-base;
-  > section {
-    padding-top: 2rem;
+// html {
+//   overflow: hidden;
+// }
+
+// body {
+//   @include translateY()
+// }
+
+.page-overview {
+  margin-top: 5%;
+  margin-bottom: 10rem;
+  position: relative;
+
+  h1 {
+    background: rgba(0, 0, 0, 0.25);
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 2rem;
+    color: $color-text-light;
+    min-width: 25rem;
+    @include font-media($font-factor-text-title);
+
+    &:before {
+      content: '';
+      border-bottom: 3rem solid rgba(0, 0, 0, 0.25);
+      border-right: 3rem solid transparent;
+      border-left: 3rem solid transparent;
+      position: absolute;
+      top: -3rem;
+      margin: 0 auto;
+      left: calc(50% - 3rem);
+      z-index: -1;
+    }
+  }
+
+  > div {
+    position: absolute;
+    bottom: 10rem;
+    width: 100%;
   }
 }
+

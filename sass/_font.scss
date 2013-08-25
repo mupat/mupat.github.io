@@ -1,21 +1,82 @@
-$fonts-path: '../fonts/lato/';
+$fonts-path: '../fonts/';
+$fonts-path-lato: "#{$fonts-path}lato/";
+$fonts-path-mupat: "#{$fonts-path}mupat/";
 
 // google web font Lato
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 100;
-  src: local('Lato Hairline'), local('Lato-Hairline'), url("#{$fonts_path}Lato-Hairline.woff") format('woff');
+  src: local('Lato Hairline'), local('Lato-Hairline'), url("#{$fonts-path-lato}Lato-Hairline.woff") format('woff');
 }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
-  src: local('Lato Light'), local('Lato-Light'), url("#{$fonts_path}Lato-Light.woff") format('woff');
+  src: local('Lato Light'), local('Lato-Light'), url("#{$fonts-path-lato}Lato-Light.woff") format('woff');
 }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url("#{$fonts_path}Lato-Regular.woff") format('woff');
+  src: local('Lato Regular'), local('Lato-Regular'), url("#{$fonts-path-lato}Lato-Regular.woff") format('woff');
+}
+
+@font-face {
+  font-family: "mupat";
+  src:url("#{$fonts-path-mupat}mupat.eot");
+  src:url("#{$fonts-path-mupat}mupat.eot?#iefix") format("embedded-opentype"),
+    url("#{$fonts-path-mupat}mupat.ttf") format("truetype"),
+    url("#{$fonts-path-mupat}mupat.svg#mupat") format("svg"),
+    url("#{$fonts-path-mupat}mupat.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "mupat";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none !important;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.icon-github:before {
+  content: "\e000";
+}
+
+.icon-xing:before {
+  content: "\e001";
+}
+
+.icon-arrow-down:before {
+  content: "\e002";
+}
+
+.icon-home:before {
+  content: "\e003";
+}
+
+.icon-user:before {
+  content: "\e004";
+}
+
+.icon-portfolio:before {
+  content: "\e005";
+}
+
+.icon-close:before {
+  content: "\e00e";
+}
+
+.icon-open:before {
+  content: "\e00f";
 }

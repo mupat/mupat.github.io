@@ -1,6 +1,9 @@
+@charset "UTF-8";
+
 @import "variables";
 @import "mixin";
 @import "font";
+@import "compass/css3";
 
 html {
   // -webkit-font-smoothing: antialiased;
@@ -9,13 +12,16 @@ html {
     size: 62.5%; // normalize 1rem to 10px
   }
   vertical-align: baseline;
+  height: 100%;
 }
 
 body {
+  background-color: $color-base;
   font-weight: $font-weight-normal;
   color: $color-text-dark;
   margin: 0;
   padding: 0;
+  height: 100%;
   @include font-media($font-factor-text, true);
 }
 
@@ -31,4 +37,21 @@ h2 {
 
 p {
   @include font-media($font-factor-text);
+}
+
+a {
+  @include transition-property(color, background-color); 
+  @include transition-duration(0.5s);
+  text-decoration: none;
+  color: $color-text-dark;
+  &:hover { color: $color-text-light; }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li { 
+  list-style: none;
 }
