@@ -585,23 +585,24 @@ li {
   height: 100%;
   left: 0;
   top: 0;
-  z-index: 5;
   opacity: 0;
+  z-index: 5;
+  visibility: hidden;
   -webkit-transition: opacity 0.3s ease;
   -moz-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
-/* line 125, ../sass/_layout.scss */
+/* line 126, ../sass/_layout.scss */
 .nav-input {
   display: none;
 }
-/* line 128, ../sass/_layout.scss */
+/* line 129, ../sass/_layout.scss */
 .nav-input:checked + .nav-button:before {
   content: '\e00e';
 }
-/* line 129, ../sass/_layout.scss */
+/* line 130, ../sass/_layout.scss */
 .nav-input:checked ~ .nav-wrapper {
   -webkit-transform: scale(1, 1);
   -moz-transform: scale(1, 1);
@@ -610,17 +611,17 @@ li {
   transform: scale(1, 1);
   bottom: -0.5rem;
 }
-/* line 133, ../sass/_layout.scss */
+/* line 134, ../sass/_layout.scss */
 .nav-input:checked ~ .nav-overlay {
   opacity: 1;
+  visibility: visible;
 }
 
-/* line 137, ../sass/_layout.scss */
+/* line 141, ../sass/_layout.scss */
 .nav-wrapper {
   position: absolute;
   height: 16rem;
   width: 100%;
-  overflow: hidden;
   z-index: 10;
   bottom: -7.25rem;
   border-radius: 50%;
@@ -638,7 +639,7 @@ li {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 149, ../sass/_layout.scss */
+/* line 153, ../sass/_layout.scss */
 .nav-wrapper li {
   position: absolute;
   width: 30rem;
@@ -656,7 +657,7 @@ li {
   -o-transition: border 0.3s ease;
   transition: border 0.3s ease;
 }
-/* line 159, ../sass/_layout.scss */
+/* line 163, ../sass/_layout.scss */
 .nav-wrapper li:first-child {
   -webkit-transform: rotate(-5deg) skew(50deg);
   -moz-transform: rotate(-5deg) skew(50deg);
@@ -664,7 +665,7 @@ li {
   -o-transform: rotate(-5deg) skew(50deg);
   transform: rotate(-5deg) skew(50deg);
 }
-/* line 163, ../sass/_layout.scss */
+/* line 167, ../sass/_layout.scss */
 .nav-wrapper li:nth-child(2) {
   -webkit-transform: rotate(33deg) skew(50deg);
   -moz-transform: rotate(33deg) skew(50deg);
@@ -672,7 +673,7 @@ li {
   -o-transform: rotate(33deg) skew(50deg);
   transform: rotate(33deg) skew(50deg);
 }
-/* line 167, ../sass/_layout.scss */
+/* line 171, ../sass/_layout.scss */
 .nav-wrapper li:nth-child(3) {
   -webkit-transform: rotate(70deg) skew(50deg);
   -moz-transform: rotate(70deg) skew(50deg);
@@ -680,7 +681,7 @@ li {
   -o-transform: rotate(70deg) skew(50deg);
   transform: rotate(70deg) skew(50deg);
 }
-/* line 171, ../sass/_layout.scss */
+/* line 175, ../sass/_layout.scss */
 .nav-wrapper li:nth-child(4) {
   -webkit-transform: rotate(110deg) skew(50deg);
   -moz-transform: rotate(110deg) skew(50deg);
@@ -688,7 +689,7 @@ li {
   -o-transform: rotate(110deg) skew(50deg);
   transform: rotate(110deg) skew(50deg);
 }
-/* line 175, ../sass/_layout.scss */
+/* line 179, ../sass/_layout.scss */
 .nav-wrapper li:nth-child(5) {
   -webkit-transform: rotate(145deg) skew(50deg);
   -moz-transform: rotate(145deg) skew(50deg);
@@ -696,9 +697,14 @@ li {
   -o-transform: rotate(145deg) skew(50deg);
   transform: rotate(145deg) skew(50deg);
 }
-/* line 179, ../sass/_layout.scss */
+/* line 183, ../sass/_layout.scss */
+.nav-wrapper li:nth-child(even) a {
+  background-color: #ff981a;
+}
+/* line 187, ../sass/_layout.scss */
 .nav-wrapper li a {
-  background-color: #2f3300;
+  background-color: #ff8d00;
+  font-size: 3rem;
   height: 30rem;
   width: 30rem;
   position: absolute;
@@ -719,58 +725,9 @@ li {
   -o-transition: opacity 0.3s, color 0.3s, background-color 0.3s;
   transition: opacity 0.3s, color 0.3s, background-color 0.3s;
 }
-/* line 181, ../sass/_layout.scss */
+/* line 189, ../sass/_layout.scss */
 .nav-wrapper li a:hover {
-  background-color: rgba(47, 51, 0, 0.9);
-}
-@media (min-width: 320px) and (max-width: 479px) {
-  /* line 179, ../sass/_layout.scss */
-  .nav-wrapper li a {
-    font-size: 30px;
-    line-height: 1em;
-  }
-}
-@media (min-width: 480px) and (max-width: 768px) {
-  /* line 179, ../sass/_layout.scss */
-  .nav-wrapper li a {
-    font-size: 35px;
-    line-height: 1em;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  /* line 179, ../sass/_layout.scss */
-  .nav-wrapper li a {
-    font-size: 39px;
-    line-height: 1em;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1280px) {
-  /* line 179, ../sass/_layout.scss */
-  .nav-wrapper li a {
-    font-size: 44px;
-    line-height: 1em;
-  }
-}
-@media (min-width: 1281px) and (max-width: 1640px) {
-  /* line 179, ../sass/_layout.scss */
-  .nav-wrapper li a {
-    font-size: 44px;
-    line-height: 1em;
-  }
-}
-@media (min-width: 1641px) and (max-width: 1920px) {
-  /* line 179, ../sass/_layout.scss */
-  .nav-wrapper li a {
-    font-size: 48px;
-    line-height: 1em;
-  }
-}
-@media (min-width: 1921px) {
-  /* line 179, ../sass/_layout.scss */
-  .nav-wrapper li a {
-    font-size: 53px;
-    line-height: 1em;
-  }
+  background-color: #2f3300;
 }
 
 /* line 12, ../sass/overview.scss */
@@ -854,6 +811,6 @@ li {
 /* line 41, ../sass/overview.scss */
 .page-overview > div {
   position: absolute;
-  bottom: 10rem;
+  bottom: 13rem;
   width: 100%;
 }

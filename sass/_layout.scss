@@ -117,8 +117,9 @@
   height: 100%;
   left: 0;
   top: 0;
-  z-index: 5;
   opacity: 0;
+  z-index: 5;
+  visibility: hidden;
   @include transition(opacity 0.3s ease);
 }
 
@@ -130,7 +131,10 @@
       @include scale(1.0); 
       bottom: -0.5rem;
     }
-    ~.nav-overlay { opacity: 1; }
+    ~.nav-overlay { 
+      opacity: 1; 
+      visibility: visible;
+    }
   }
 }
 
@@ -138,7 +142,7 @@
   position: absolute;
   height: 16rem;
   width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
   z-index: 10;
   bottom: -7.25rem;
   border-radius: 50%;
@@ -175,11 +179,16 @@
     &:nth-child(5) {
        @include transform(rotate(145deg) skew(50deg));
     }
+
+    &:nth-child(even) a {
+      background-color: $color-highlight-light; 
+    }
      
-    a { 
-      background-color: $color-highlight-dark;
-      &:hover { background-color: transparentize($color-highlight-dark, 0.1); }
-      @include font-media($font-factor-text-title);
+    a {
+      background-color: darken($color-highlight-light, 5%);
+      &:hover { background-color: $color-highlight-dark; }
+      // @include font-media($font-factor-text-headline);
+      font-size: 3rem;
       height: 30rem;
       width: 30rem;
       position: absolute;
