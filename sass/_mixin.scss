@@ -13,3 +13,10 @@
   @if $line-height { line-height: round($size*1.6)#{$unit}; }
   @else { line-height: 1em; }
 }
+
+@mixin calc($property, $expression) { 
+  #{$property}: -moz-calc(#{$expression}); 
+  #{$property}: -o-calc(#{$expression}); 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: calc(#{$expression}); 
+} 

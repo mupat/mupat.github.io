@@ -60,7 +60,7 @@
 
   &:before {
     position: absolute;
-    left: calc(50% - 30px);
+    @include calc(left, "50% - 30px");
     color: $color-highlight-dark;
     font-size: 60px;
     opacity: 0;
@@ -99,7 +99,7 @@
   z-index: 15;
   width: 10rem;
   height: 10rem;
-  left: calc(50% - 5rem);
+  @include calc(left, "50% - 5rem");
   border-radius: 50%;
 
   &:before {
@@ -142,7 +142,6 @@
   position: absolute;
   height: 16rem;
   width: 100%;
-  // overflow: hidden;
   z-index: 10;
   bottom: -7.25rem;
   border-radius: 50%;
@@ -156,7 +155,7 @@
     height: 30rem;
     @include transform-origin(100%, 100%);
     overflow: hidden;
-    left: calc(50% - 30rem);
+    @include calc(left, "50% - 30rem");
     bottom: 0;
     @include transition(border 0.3s ease);
 

@@ -104,22 +104,22 @@ body {
 @media (min-width: 320px) and (max-width: 479px) {
   /* line 18, ../sass/_base.scss */
   body {
-    font-size: 13px;
-    line-height: 21px;
+    font-size: 17px;
+    line-height: 27px;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   /* line 18, ../sass/_base.scss */
   body {
-    font-size: 15px;
-    line-height: 24px;
+    font-size: 17px;
+    line-height: 27px;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   /* line 18, ../sass/_base.scss */
   body {
-    font-size: 17px;
-    line-height: 27px;
+    font-size: 19px;
+    line-height: 30px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
@@ -158,21 +158,21 @@ h1 {
 @media (min-width: 320px) and (max-width: 479px) {
   /* line 28, ../sass/_base.scss */
   h1 {
-    font-size: 21px;
+    font-size: 27px;
     line-height: 1em;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   /* line 28, ../sass/_base.scss */
   h1 {
-    font-size: 24px;
+    font-size: 27px;
     line-height: 1em;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   /* line 28, ../sass/_base.scss */
   h1 {
-    font-size: 27px;
+    font-size: 30px;
     line-height: 1em;
   }
 }
@@ -212,21 +212,21 @@ h2 {
 @media (min-width: 320px) and (max-width: 479px) {
   /* line 33, ../sass/_base.scss */
   h2 {
-    font-size: 16px;
+    font-size: 21px;
     line-height: 1em;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   /* line 33, ../sass/_base.scss */
   h2 {
-    font-size: 19px;
+    font-size: 21px;
     line-height: 1em;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   /* line 33, ../sass/_base.scss */
   h2 {
-    font-size: 21px;
+    font-size: 24px;
     line-height: 1em;
   }
 }
@@ -262,21 +262,21 @@ h2 {
 @media (min-width: 320px) and (max-width: 479px) {
   /* line 38, ../sass/_base.scss */
   p {
-    font-size: 13px;
+    font-size: 17px;
     line-height: 1em;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   /* line 38, ../sass/_base.scss */
   p {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1em;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   /* line 38, ../sass/_base.scss */
   p {
-    font-size: 17px;
+    font-size: 19px;
     line-height: 1em;
   }
 }
@@ -355,21 +355,21 @@ li {
 @media (min-width: 320px) and (max-width: 479px) {
   /* line 7, ../sass/_layout.scss */
   .quote {
-    font-size: 21px;
+    font-size: 27px;
     line-height: 1em;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   /* line 7, ../sass/_layout.scss */
   .quote {
-    font-size: 24px;
+    font-size: 27px;
     line-height: 1em;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   /* line 7, ../sass/_layout.scss */
   .quote {
-    font-size: 27px;
+    font-size: 30px;
     line-height: 1em;
   }
 }
@@ -443,21 +443,21 @@ li {
 @media (min-width: 320px) and (max-width: 479px) {
   /* line 36, ../sass/_layout.scss */
   .btn {
-    font-size: 16px;
+    font-size: 21px;
     line-height: 1em;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   /* line 36, ../sass/_layout.scss */
   .btn {
-    font-size: 19px;
+    font-size: 21px;
     line-height: 1em;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   /* line 36, ../sass/_layout.scss */
   .btn {
-    font-size: 21px;
+    font-size: 24px;
     line-height: 1em;
   }
 }
@@ -517,6 +517,9 @@ li {
 /* line 61, ../sass/_layout.scss */
 .btn-down:before {
   position: absolute;
+  left: -moz-calc(50% - 30px);
+  left: -o-calc(50% - 30px);
+  left: -webkit-calc(50% - 30px);
   left: calc(50% - 30px);
   color: #2f3300;
   font-size: 60px;
@@ -566,6 +569,9 @@ li {
   z-index: 15;
   width: 10rem;
   height: 10rem;
+  left: -moz-calc(50% - 5rem);
+  left: -o-calc(50% - 5rem);
+  left: -webkit-calc(50% - 5rem);
   left: calc(50% - 5rem);
   border-radius: 50%;
 }
@@ -639,7 +645,7 @@ li {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 153, ../sass/_layout.scss */
+/* line 152, ../sass/_layout.scss */
 .nav-wrapper li {
   position: absolute;
   width: 30rem;
@@ -650,6 +656,9 @@ li {
   -o-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
   overflow: hidden;
+  left: -moz-calc(50% - 30rem);
+  left: -o-calc(50% - 30rem);
+  left: -webkit-calc(50% - 30rem);
   left: calc(50% - 30rem);
   bottom: 0;
   -webkit-transition: border 0.3s ease;
@@ -657,7 +666,7 @@ li {
   -o-transition: border 0.3s ease;
   transition: border 0.3s ease;
 }
-/* line 163, ../sass/_layout.scss */
+/* line 162, ../sass/_layout.scss */
 .nav-wrapper li:first-child {
   -webkit-transform: rotate(-5deg) skew(50deg);
   -moz-transform: rotate(-5deg) skew(50deg);
@@ -665,7 +674,7 @@ li {
   -o-transform: rotate(-5deg) skew(50deg);
   transform: rotate(-5deg) skew(50deg);
 }
-/* line 167, ../sass/_layout.scss */
+/* line 166, ../sass/_layout.scss */
 .nav-wrapper li:nth-child(2) {
   -webkit-transform: rotate(33deg) skew(50deg);
   -moz-transform: rotate(33deg) skew(50deg);
@@ -673,7 +682,7 @@ li {
   -o-transform: rotate(33deg) skew(50deg);
   transform: rotate(33deg) skew(50deg);
 }
-/* line 171, ../sass/_layout.scss */
+/* line 170, ../sass/_layout.scss */
 .nav-wrapper li:nth-child(3) {
   -webkit-transform: rotate(70deg) skew(50deg);
   -moz-transform: rotate(70deg) skew(50deg);
@@ -681,7 +690,7 @@ li {
   -o-transform: rotate(70deg) skew(50deg);
   transform: rotate(70deg) skew(50deg);
 }
-/* line 175, ../sass/_layout.scss */
+/* line 174, ../sass/_layout.scss */
 .nav-wrapper li:nth-child(4) {
   -webkit-transform: rotate(110deg) skew(50deg);
   -moz-transform: rotate(110deg) skew(50deg);
@@ -689,7 +698,7 @@ li {
   -o-transform: rotate(110deg) skew(50deg);
   transform: rotate(110deg) skew(50deg);
 }
-/* line 179, ../sass/_layout.scss */
+/* line 178, ../sass/_layout.scss */
 .nav-wrapper li:nth-child(5) {
   -webkit-transform: rotate(145deg) skew(50deg);
   -moz-transform: rotate(145deg) skew(50deg);
@@ -697,11 +706,11 @@ li {
   -o-transform: rotate(145deg) skew(50deg);
   transform: rotate(145deg) skew(50deg);
 }
-/* line 183, ../sass/_layout.scss */
+/* line 182, ../sass/_layout.scss */
 .nav-wrapper li:nth-child(even) a {
   background-color: #ff981a;
 }
-/* line 187, ../sass/_layout.scss */
+/* line 186, ../sass/_layout.scss */
 .nav-wrapper li a {
   background-color: #ff8d00;
   font-size: 3rem;
@@ -725,18 +734,20 @@ li {
   -o-transition: opacity 0.3s, color 0.3s, background-color 0.3s;
   transition: opacity 0.3s, color 0.3s, background-color 0.3s;
 }
-/* line 189, ../sass/_layout.scss */
+/* line 188, ../sass/_layout.scss */
 .nav-wrapper li a:hover {
   background-color: #2f3300;
 }
 
 /* line 12, ../sass/overview.scss */
 .page-overview {
-  margin-top: 5%;
-  margin-bottom: 10rem;
   position: relative;
 }
-/* line 17, ../sass/overview.scss */
+/* line 15, ../sass/overview.scss */
+.page-overview img {
+  margin-top: 5%;
+}
+/* line 18, ../sass/overview.scss */
 .page-overview h1 {
   background: rgba(0, 0, 0, 0.25);
   position: relative;
@@ -748,55 +759,55 @@ li {
   min-width: 25rem;
 }
 @media (min-width: 320px) and (max-width: 479px) {
-  /* line 17, ../sass/overview.scss */
-  .page-overview h1 {
-    font-size: 30px;
-    line-height: 1em;
-  }
-}
-@media (min-width: 480px) and (max-width: 768px) {
-  /* line 17, ../sass/overview.scss */
-  .page-overview h1 {
-    font-size: 35px;
-    line-height: 1em;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  /* line 17, ../sass/overview.scss */
+  /* line 18, ../sass/overview.scss */
   .page-overview h1 {
     font-size: 39px;
     line-height: 1em;
   }
 }
+@media (min-width: 480px) and (max-width: 768px) {
+  /* line 18, ../sass/overview.scss */
+  .page-overview h1 {
+    font-size: 39px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* line 18, ../sass/overview.scss */
+  .page-overview h1 {
+    font-size: 44px;
+    line-height: 1em;
+  }
+}
 @media (min-width: 1025px) and (max-width: 1280px) {
-  /* line 17, ../sass/overview.scss */
+  /* line 18, ../sass/overview.scss */
   .page-overview h1 {
     font-size: 44px;
     line-height: 1em;
   }
 }
 @media (min-width: 1281px) and (max-width: 1640px) {
-  /* line 17, ../sass/overview.scss */
+  /* line 18, ../sass/overview.scss */
   .page-overview h1 {
     font-size: 44px;
     line-height: 1em;
   }
 }
 @media (min-width: 1641px) and (max-width: 1920px) {
-  /* line 17, ../sass/overview.scss */
+  /* line 18, ../sass/overview.scss */
   .page-overview h1 {
     font-size: 48px;
     line-height: 1em;
   }
 }
 @media (min-width: 1921px) {
-  /* line 17, ../sass/overview.scss */
+  /* line 18, ../sass/overview.scss */
   .page-overview h1 {
     font-size: 53px;
     line-height: 1em;
   }
 }
-/* line 28, ../sass/overview.scss */
+/* line 29, ../sass/overview.scss */
 .page-overview h1:before {
   content: '';
   border-bottom: 3rem solid rgba(0, 0, 0, 0.25);
@@ -805,12 +816,13 @@ li {
   position: absolute;
   top: -3rem;
   margin: 0 auto;
+  left: -moz-calc(50% - 3rem);
+  left: -o-calc(50% - 3rem);
+  left: -webkit-calc(50% - 3rem);
   left: calc(50% - 3rem);
   z-index: -1;
 }
-/* line 41, ../sass/overview.scss */
+/* line 42, ../sass/overview.scss */
 .page-overview > div {
-  position: absolute;
-  bottom: 13rem;
-  width: 100%;
+  margin-top: 10rem;
 }
