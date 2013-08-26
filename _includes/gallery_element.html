@@ -1,0 +1,29 @@
+<li class="gallery-element">
+  <label class="galllery-label" for="gallery-{{ include.el.name }}">
+    <h2 class="gallery-head">{{ include.el.name }}</h2>
+    <img class="gallery-img" src="{{ sites.url }}/assets/images/{{ include.el.img }}"></img>
+  </label>
+  <input type="checkbox"  class="gallery-input" id="gallery-{{ include.el.name }}" />
+  <div class="gallery-info">
+    {% if include.el.description %}
+      <p class="gallery-description">{{ include.el.description }}</p>
+    {% endif %}
+    {% if include.el.technics %}
+    <ul class="gallery-technics">
+      {% for technic in include.el.technics %}
+        <li class="gallery-technic">{{ technic }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% if include.el.source or include.el.view %}
+      <div class="gallery-actions">
+        {% if include.el.source %}
+          <a class="gallery-action">{{ include.el.source }}</a>
+        {% endif %}
+        {% if include.el.view %}
+          <a class="gallery-action">{{ include.el.view }}</a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</li>

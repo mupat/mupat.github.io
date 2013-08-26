@@ -4,6 +4,26 @@ title: overview
 avatar:
   privat:  http://www.gravatar.com/avatar/1cdf632360a3bbd00dcf94268c9b6c12.png
   size: 200
+galleries:
+  -
+    name: Ultimate Huskies
+    description: A wordpress site for representing my sports club 'Ultimate Huskies'. A ultimate frisbee team. It includes a forum for registered users. I was responsable from the design to the integration in wordpress, by creating an own theme. I'm still in charge for the maintenance. :)
+    technics:
+      - CSS3 and HTML5
+      - jQuery
+      - PHP 5 and Mysql
+      - photoshop
+    source: https://github.com/Ultimate-Huskies/website
+    view: http://ultimate-huskies.de/
+    img: ultimate-huskies.png
+  -
+    name: Android Play Search
+    description: A project to establish a service to search in the play store by using just the bundle identifier and get a response in JSON, like the search API from iTunes. Need to be deployed on own servers.
+    technics:
+      - node.io (screemscraper)
+      - node.js
+      - coffeescript
+    source: https://github.com/Mupat/android-market-search
 ---
 
 <section id="home" class="page align-center page-overview">
@@ -16,5 +36,9 @@ avatar:
 </section>
 
 <section id="portfolio" class="page page-highlight">
-  
+  <ul class="gallery">
+    {% for gallery in page.galleries %}
+      {% include gallery_element.html el=gallery %}
+    {% endfor %}
+  </ul>
 </section>
