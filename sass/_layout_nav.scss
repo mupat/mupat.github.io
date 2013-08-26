@@ -83,23 +83,26 @@
     // @include transition(border 0.3s ease);
 
     &:first-child {
-      @include transform(rotate(-5deg) skew(50deg));
+      @include transform(rotate(0deg) skew(60deg));
     }
      
      &:nth-child(2) {
-       @include transform(rotate(33deg) skew(50deg));
+       @include transform(rotate(30deg) skew(60deg));
     }
      
     &:nth-child(3) {
-       @include transform(rotate(70deg) skew(50deg));
+       @include transform(rotate(60deg) skew(60deg));
     }
      
     &:nth-child(4) {
-       @include transform(rotate(110deg) skew(50deg));
+       @include transform(rotate(90deg) skew(60deg));
     }
      
     &:nth-child(5) {
-       @include transform(rotate(145deg) skew(50deg));
+       @include transform(rotate(120deg) skew(60deg));
+    }
+    &:nth-child(6) {
+       @include transform(rotate(150deg) skew(60deg));
     }
 
     &:nth-child(even) a {
@@ -121,8 +124,13 @@
       color: $color-text-light;
       padding-top: 1.8rem;
       text-align: center;
-      @include transform(skew(-50deg) rotate(-70deg) scale(1));
+      @include transform(skew(-60deg) rotate(-70deg) scale(1));
       @include transition(color 0.5s, background-color 0.5s);
+
+      > span {
+        position: relative;
+        left: -1rem;
+      }
 
       &.nav-extern {
         background-color: darken($color-highlight-dark, 2%);
