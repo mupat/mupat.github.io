@@ -104,15 +104,15 @@ body {
 @media (min-width: 320px) and (max-width: 479px) {
   /* line 18, ../sass/_base.scss */
   body {
-    font-size: 17px;
-    line-height: 27px;
+    font-size: 15px;
+    line-height: 24px;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   /* line 18, ../sass/_base.scss */
   body {
-    font-size: 17px;
-    line-height: 27px;
+    font-size: 16px;
+    line-height: 26px;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -158,14 +158,14 @@ h1 {
 @media (min-width: 320px) and (max-width: 479px) {
   /* line 28, ../sass/_base.scss */
   h1 {
-    font-size: 27px;
+    font-size: 24px;
     line-height: 1em;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   /* line 28, ../sass/_base.scss */
   h1 {
-    font-size: 27px;
+    font-size: 26px;
     line-height: 1em;
   }
 }
@@ -212,14 +212,14 @@ h2 {
 @media (min-width: 320px) and (max-width: 479px) {
   /* line 33, ../sass/_base.scss */
   h2 {
-    font-size: 21px;
+    font-size: 19px;
     line-height: 1em;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   /* line 33, ../sass/_base.scss */
   h2 {
-    font-size: 21px;
+    font-size: 20px;
     line-height: 1em;
   }
 }
@@ -262,14 +262,14 @@ h2 {
 @media (min-width: 320px) and (max-width: 479px) {
   /* line 38, ../sass/_base.scss */
   p {
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1em;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   /* line 38, ../sass/_base.scss */
   p {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1em;
   }
 }
@@ -355,14 +355,14 @@ li {
 @media (min-width: 320px) and (max-width: 479px) {
   /* line 7, ../sass/_layout.scss */
   .quote {
-    font-size: 27px;
+    font-size: 24px;
     line-height: 1em;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   /* line 7, ../sass/_layout.scss */
   .quote {
-    font-size: 27px;
+    font-size: 26px;
     line-height: 1em;
   }
 }
@@ -443,14 +443,14 @@ li {
 @media (min-width: 320px) and (max-width: 479px) {
   /* line 36, ../sass/_layout.scss */
   .btn {
-    font-size: 21px;
+    font-size: 19px;
     line-height: 1em;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   /* line 36, ../sass/_layout.scss */
   .btn {
-    font-size: 21px;
+    font-size: 20px;
     line-height: 1em;
   }
 }
@@ -544,7 +544,7 @@ li {
 /* line 78, ../sass/_layout.scss */
 .page {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 }
 
 /* line 83, ../sass/_layout.scss */
@@ -761,14 +761,14 @@ li {
 @media (min-width: 320px) and (max-width: 479px) {
   /* line 18, ../sass/overview.scss */
   .page-overview h1 {
-    font-size: 39px;
+    font-size: 35px;
     line-height: 1em;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   /* line 18, ../sass/overview.scss */
   .page-overview h1 {
-    font-size: 39px;
+    font-size: 37px;
     line-height: 1em;
   }
 }
