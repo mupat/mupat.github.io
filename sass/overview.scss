@@ -1,5 +1,6 @@
 @import "base";
 @import "layout";
+@import "layout_nav";
 
 // html {
 //   overflow: hidden;
@@ -11,7 +12,7 @@
 
 .page-overview {
   position: relative;
-  
+
   img {
     margin-top: 5%;
   }

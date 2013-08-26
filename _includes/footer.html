@@ -1,15 +1,16 @@
 <nav class="nav align-center">
+  <span>Powered by <a href="http://jekyllrb.com/">Jekyll</a></span>
   <input class="nav-input" id="nav-button" type="checkbox" />
   <label for="nav-button" class="nav-button icon-open"></label>
   <div class="nav-wrapper">
-    <ul>
-      <li><a href="#home" class="icon-home"></a></li>
-      <li><a href="#portfolio" class="icon-portfolio"></a></li>
-      <li><a href="{{ site.url }}/curriculum_vitae" class="icon-user"></a></li>
-      
-      <li><a href="https://github.com/Mupat" class="icon-github nav-extern"></a></li>
-      <li><a href="https://www.xing.com/profiles/Patrick_Mueller320" class="icon-xing nav-extern"></a></li>
+    <ul class="nav-list">
+      <li class="nav-list-element" ><a href="/#portfolio" class="nav-list-link icon-portfolio"></a></li>
+      <li class="nav-list-element" ><a href="{{ site.url }}/curriculum_vitae" class="nav-list-link icon-user"></a></li>
+      <li class="nav-list-element" ><a href="mailto:dev@mupat.net" class="icon-mail nav-list-link nav-extern"></a></li>
+      <li class="nav-list-element" ><a href="https://github.com/Mupat" class="icon-github nav-list-link nav-extern"></a></li>
+      <li class="nav-list-element" ><a href="https://www.xing.com/profiles/Patrick_Mueller320" class="icon-xing nav-list-link nav-extern"></a></li>
      </ul>
   </div>
+  <span><a href="{{ site.url }}/imprint">Imprint</a></span>
   <div id="nav-overlay" class="nav-overlay"></div>
 </nav>

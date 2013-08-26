@@ -57,10 +57,6 @@ $fonts-path-mupat: "#{$fonts-path}mupat/";
   content: "\e001";
 }
 
-.icon-arrow-down:before {
-  content: "\e002";
-}
-
 .icon-home:before {
   content: "\e003";
 }
@@ -79,4 +75,16 @@ $fonts-path-mupat: "#{$fonts-path}mupat/";
 
 .icon-open:before {
   content: "\e00f";
+}
+
+.icon-cv-highlight:before {
+  content: "\e00a";
+}
+
+.icon-mail:before {
+  content: "\e00b";
+}
+
+.icon-portfolio-highlight:before {
+  content: "\e012";
 }

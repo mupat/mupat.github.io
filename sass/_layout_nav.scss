@@ -1,0 +1,133 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+
+  > span { 
+    position: relative; 
+    &:first-of-type { 
+      left: -11rem; 
+      @media (max-width: 320px) { visibility: hidden; }
+    }
+    &:last-of-type { left: 2rem; }
+  }
+}
+
+.nav-button {
+  cursor: pointer;
+  position: absolute;
+  font-size: 5rem;
+  bottom: -5rem;
+  background-color: $color-text-light;
+  z-index: 15;
+  width: 10rem;
+  height: 10rem;
+  @include calc(left, "50% - 5rem");
+  border-radius: 50%;
+
+  &:before {
+    position: absolute;
+    top: 1rem;
+    left: 3.5rem;
+    font-size: 3rem;
+  }
+}
+
+.nav-overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 5;
+  visibility: hidden;
+  @include transition(opacity 0.5s ease);
+}
+
+.nav-input { 
+  display: none; 
+  &:checked {
+    +.nav-button:before { content: '\e00e'; }
+    ~.nav-wrapper { 
+      @include scale(1.0); 
+      bottom: -0.5rem;
+    }
+    ~.nav-overlay { 
+      opacity: 1; 
+      visibility: visible;
+    }
+  }
+}
+
+.nav-wrapper {
+  position: absolute;
+  height: 16rem;
+  width: 100%;
+  z-index: 10;
+  bottom: -7.25rem;
+  border-radius: 50%;
+  @include scale(0.1);
+  @include transition-property(scale, bottom);
+  @include transition-duration(0.3s);
+
+  .nav-list-element {
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    @include transform-origin(100%, 100%);
+    overflow: hidden;
+    @include calc(left, "50% - 30rem");
+    bottom: 0;
+    // @include transition(border 0.3s ease);
+
+    &:first-child {
+      @include transform(rotate(-5deg) skew(50deg));
+    }
+     
+     &:nth-child(2) {
+       @include transform(rotate(33deg) skew(50deg));
+    }
+     
+    &:nth-child(3) {
+       @include transform(rotate(70deg) skew(50deg));
+    }
+     
+    &:nth-child(4) {
+       @include transform(rotate(110deg) skew(50deg));
+    }
+     
+    &:nth-child(5) {
+       @include transform(rotate(145deg) skew(50deg));
+    }
+
+    &:nth-child(even) a {
+      background-color: $color-highlight-light;
+      &.nav-extern { background-color: $color-highlight-dark; }
+    }
+     
+    .nav-list-link {
+      background-color: darken($color-highlight-light, 5%);
+      &:hover { background-color: $color-highlight-dark; }
+      font-size: 3rem;
+      height: 30rem;
+      width: 30rem;
+      position: absolute;
+      bottom: -16rem;
+      right: -15rem;
+      border-radius: 50%;
+      text-decoration: none;
+      color: $color-text-light;
+      padding-top: 1.8rem;
+      text-align: center;
+      @include transform(skew(-50deg) rotate(-70deg) scale(1));
+      @include transition(color 0.5s, background-color 0.5s);
+
+      &.nav-extern {
+        background-color: darken($color-highlight-dark, 2%);
+        &:hover { background-color: $color-highlight-light; }
+      }
+    }
+  }
+}
