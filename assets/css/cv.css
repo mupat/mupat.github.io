@@ -579,11 +579,12 @@ li {
 
 /* line 68, ../../sass/_layout.scss */
 .page {
+  background-color: #61cc61;
   width: 100%;
   min-height: 100%;
 }
 
-/* line 73, ../../sass/_layout.scss */
+/* line 74, ../../sass/_layout.scss */
 .page-highlight {
   background-color: #564324;
 }
@@ -593,27 +594,28 @@ li {
   position: fixed;
   width: 100%;
   bottom: 0;
+  z-index: 500;
 }
-/* line 6, ../../sass/_layout_nav.scss */
+/* line 7, ../../sass/_layout_nav.scss */
 .nav > span {
   position: relative;
 }
-/* line 8, ../../sass/_layout_nav.scss */
+/* line 9, ../../sass/_layout_nav.scss */
 .nav > span:first-of-type {
   left: -11rem;
 }
 @media (max-width: 320px) {
-  /* line 8, ../../sass/_layout_nav.scss */
+  /* line 9, ../../sass/_layout_nav.scss */
   .nav > span:first-of-type {
     visibility: hidden;
   }
 }
-/* line 12, ../../sass/_layout_nav.scss */
+/* line 13, ../../sass/_layout_nav.scss */
 .nav > span:last-of-type {
   left: 2rem;
 }
 
-/* line 16, ../../sass/_layout_nav.scss */
+/* line 17, ../../sass/_layout_nav.scss */
 .nav-button {
   cursor: pointer;
   position: absolute;
@@ -629,7 +631,7 @@ li {
   left: calc(50% - 5rem);
   border-radius: 50%;
 }
-/* line 28, ../../sass/_layout_nav.scss */
+/* line 29, ../../sass/_layout_nav.scss */
 .nav-button:before {
   position: absolute;
   top: 1rem;
@@ -637,7 +639,7 @@ li {
   font-size: 3rem;
 }
 
-/* line 36, ../../sass/_layout_nav.scss */
+/* line 37, ../../sass/_layout_nav.scss */
 .nav-overlay {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
@@ -654,15 +656,15 @@ li {
   transition: opacity 0.5s ease;
 }
 
-/* line 49, ../../sass/_layout_nav.scss */
+/* line 50, ../../sass/_layout_nav.scss */
 .nav-input {
   display: none;
 }
-/* line 52, ../../sass/_layout_nav.scss */
+/* line 53, ../../sass/_layout_nav.scss */
 .nav-input:checked + .nav-button:before {
   content: '\e00e';
 }
-/* line 53, ../../sass/_layout_nav.scss */
+/* line 54, ../../sass/_layout_nav.scss */
 .nav-input:checked ~ .nav-wrapper {
   -webkit-transform: scale(1, 1);
   -moz-transform: scale(1, 1);
@@ -671,13 +673,13 @@ li {
   transform: scale(1, 1);
   bottom: -0.5rem;
 }
-/* line 57, ../../sass/_layout_nav.scss */
+/* line 58, ../../sass/_layout_nav.scss */
 .nav-input:checked ~ .nav-overlay {
   opacity: 1;
   visibility: visible;
 }
 
-/* line 64, ../../sass/_layout_nav.scss */
+/* line 65, ../../sass/_layout_nav.scss */
 .nav-wrapper {
   position: absolute;
   height: 16rem;
@@ -699,7 +701,7 @@ li {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 75, ../../sass/_layout_nav.scss */
+/* line 76, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element {
   position: absolute;
   width: 30rem;
@@ -716,7 +718,7 @@ li {
   left: calc(50% - 30rem);
   bottom: 0;
 }
-/* line 85, ../../sass/_layout_nav.scss */
+/* line 86, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element:first-child {
   -webkit-transform: rotate(0deg) skew(60deg);
   -moz-transform: rotate(0deg) skew(60deg);
@@ -724,7 +726,7 @@ li {
   -o-transform: rotate(0deg) skew(60deg);
   transform: rotate(0deg) skew(60deg);
 }
-/* line 89, ../../sass/_layout_nav.scss */
+/* line 90, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element:nth-child(2) {
   -webkit-transform: rotate(30deg) skew(60deg);
   -moz-transform: rotate(30deg) skew(60deg);
@@ -732,7 +734,7 @@ li {
   -o-transform: rotate(30deg) skew(60deg);
   transform: rotate(30deg) skew(60deg);
 }
-/* line 93, ../../sass/_layout_nav.scss */
+/* line 94, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element:nth-child(3) {
   -webkit-transform: rotate(60deg) skew(60deg);
   -moz-transform: rotate(60deg) skew(60deg);
@@ -740,7 +742,7 @@ li {
   -o-transform: rotate(60deg) skew(60deg);
   transform: rotate(60deg) skew(60deg);
 }
-/* line 97, ../../sass/_layout_nav.scss */
+/* line 98, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element:nth-child(4) {
   -webkit-transform: rotate(90deg) skew(60deg);
   -moz-transform: rotate(90deg) skew(60deg);
@@ -748,7 +750,7 @@ li {
   -o-transform: rotate(90deg) skew(60deg);
   transform: rotate(90deg) skew(60deg);
 }
-/* line 101, ../../sass/_layout_nav.scss */
+/* line 102, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element:nth-child(5) {
   -webkit-transform: rotate(120deg) skew(60deg);
   -moz-transform: rotate(120deg) skew(60deg);
@@ -756,7 +758,7 @@ li {
   -o-transform: rotate(120deg) skew(60deg);
   transform: rotate(120deg) skew(60deg);
 }
-/* line 104, ../../sass/_layout_nav.scss */
+/* line 105, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element:nth-child(6) {
   -webkit-transform: rotate(150deg) skew(60deg);
   -moz-transform: rotate(150deg) skew(60deg);
@@ -764,15 +766,15 @@ li {
   -o-transform: rotate(150deg) skew(60deg);
   transform: rotate(150deg) skew(60deg);
 }
-/* line 108, ../../sass/_layout_nav.scss */
+/* line 109, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element:nth-child(even) a {
   background-color: #ff981a;
 }
-/* line 110, ../../sass/_layout_nav.scss */
+/* line 111, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element:nth-child(even) a.nav-extern {
   background-color: #564324;
 }
-/* line 113, ../../sass/_layout_nav.scss */
+/* line 114, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element .nav-list-link {
   background-color: #ff8d00;
   font-size: 3rem;
@@ -796,20 +798,20 @@ li {
   -o-transition: color 0.5s, background-color 0.5s;
   transition: color 0.5s, background-color 0.5s;
 }
-/* line 115, ../../sass/_layout_nav.scss */
+/* line 116, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element .nav-list-link:hover {
   background-color: #564324;
 }
-/* line 130, ../../sass/_layout_nav.scss */
+/* line 131, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element .nav-list-link > span {
   position: relative;
   left: -1rem;
 }
-/* line 135, ../../sass/_layout_nav.scss */
+/* line 136, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element .nav-list-link.nav-extern {
   background-color: #4f3d21;
 }
-/* line 137, ../../sass/_layout_nav.scss */
+/* line 138, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element .nav-list-link.nav-extern:hover {
   background-color: #ff981a;
 }

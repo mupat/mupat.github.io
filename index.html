@@ -25,20 +25,23 @@ galleries:
       - coffeescript
     source: https://github.com/Mupat/android-market-search
 ---
+<section id="portfolio" class="page page-highlight page-portfolio">
+  <ul class="gallery">
+    {% for gallery in page.galleries %}
+      {% include gallery_element.html el=gallery %}
+    {% endfor %}
+  </ul>
+</section>
 
-<section id="home" class="page align-center page-overview">
+<section id="cv" class="page page-cv">
+  test
+</section>
+
+<section id="" class="page align-center page-overview">
   <img class="avatar avatar-highlight" src="{{ page.avatar.privat }}?s={{ page.avatar.size }}" alt="avatar for privat">
   <h1>Hi, i'm a software developer with passion for design</h1>
   <div>
     <a href="{{ site.url }}/curriculum_vitae" class="btn btn-highlight btn-highlight-invert icon-cv-highlight btn-icon">Get more informations about me</a>
     <a href="#portfolio" class="btn btn-highlight btn-highlight-invert icon-portfolio-highlight btn-icon">See some of my public available projects</a>
   </div> 
-</section>
-
-<section id="portfolio" class="page page-highlight">
-  <ul class="gallery">
-    {% for gallery in page.galleries %}
-      {% include gallery_element.html el=gallery %}
-    {% endfor %}
-  </ul>
 </section>
