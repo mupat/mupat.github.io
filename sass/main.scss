@@ -1,0 +1,35 @@
+@import "base";
+@import "layout";
+
+#overview {
+  img { 
+    margin-top:  4.5%; 
+    position: relative;
+    z-index: 10;
+  }
+
+  h1 {
+    background: rgba(0, 0, 0, 0.25);
+    position: relative;
+    width: 55%;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 2rem;
+    color: $color-text-light;
+    min-width: 25rem;
+    @include font-media($font-factor-text-title);
+
+    @media (max-width: 768px) { margin-bottom: 1rem; }
+
+    &:before {
+      content: '';
+      border-bottom: 3rem solid rgba(0, 0, 0, 0.25);
+      border-right: 3rem solid transparent;
+      border-left: 3rem solid transparent;
+      position: absolute;
+      top: -3rem;
+      @include calc(left, "50% - 3rem");
+    }
+  }
+}
+

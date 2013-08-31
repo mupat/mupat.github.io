@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.75, maximum-scale=1">
   <meta name="author" content="Patrick Müller" />
 
-  <title>Mupat - {{ page.title }}</title>
+  <title>Mupat {% if page.title %} - {{ page.title }} {% endif %}</title>
 
-  <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.title }}.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.css }}.css" type="text/css" media="screen, projection" />
 </head>
 <body>
+  <!-- {% include nav.html %} -->
   {{ content }}
   {% include footer.html %}
 </body>

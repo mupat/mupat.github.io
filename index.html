@@ -1,47 +1,25 @@
 ---
 layout: default
-title: overview
-avatar:
-  privat:  http://www.gravatar.com/avatar/1cdf632360a3bbd00dcf94268c9b6c12.png
+css: main
+avatar: 
+  url: http://www.gravatar.com/avatar/1cdf632360a3bbd00dcf94268c9b6c12.png
   size: 200
-galleries:
-  -
-    name: Ultimate Huskies
-    description: A wordpress site for representing my sports club 'Ultimate Huskies'. A ultimate frisbee team. It includes a forum for registered users. I was responsable from the design to the integration in wordpress, by creating an own theme. I'm still in charge for the maintenance. :)
-    technics:
-      - CSS3 and HTML5
-      - jQuery
-      - PHP 5 and Mysql
-      - photoshop
-    source: https://github.com/Ultimate-Huskies/website
-    view: http://ultimate-huskies.de/
-    img: ultimate-huskies.png
-  -
-    name: Android Play Search
-    description: A project to establish a service to search in the play store by using just the bundle identifier and get a response in JSON, like the search API from iTunes. Need to be deployed on own servers.
-    technics:
-      - node.io (screemscraper)
-      - node.js
-      - coffeescript
-    source: https://github.com/Mupat/android-market-search
 ---
-<section id="portfolio" class="page page-highlight page-portfolio">
-  <ul class="gallery">
-    {% for gallery in page.galleries %}
-      {% include gallery_element.html el=gallery %}
-    {% endfor %}
-  </ul>
-</section>
 
-<section id="cv" class="page page-cv">
-  test
-</section>
-
-<section id="" class="page align-center page-overview">
-  <img class="avatar avatar-highlight" src="{{ page.avatar.privat }}?s={{ page.avatar.size }}" alt="avatar for privat">
+<section id="overview" class="page align-center">
+  <img class="avatar avatar-highlight" src="{{ page.avatar.url }}?s={{ page.avatar.size }}" alt="avatar for mupat">
   <h1>Hi, i'm a software developer with passion for design</h1>
-  <div>
-    <a href="{{ site.url }}/curriculum_vitae" class="btn btn-highlight btn-highlight-invert icon-cv-highlight btn-icon">Get more informations about me</a>
-    <a href="#portfolio" class="btn btn-highlight btn-highlight-invert icon-portfolio-highlight btn-icon">See some of my public available projects</a>
-  </div> 
+</section>
+<span class="page-next icon-portfolio-highlight"></span>
+<section id="portfolio" class="page page-highlight align-center">
+  <h1 class="page-header  align-center">Portfolio</h1>
+  {% include portfolio.html %}
+</section>
+<span class="page-next icon-portfolio"></span>
+<section id="skills" class="page align-center">
+  <h1 class="page-header  align-center">Skills</h1>
+</section>
+<span class="page-next icon-cv-highlight"></span>
+<section id="curriculum-vitae" class="page page-highlight align-center">
+  <h1 class="page-header  align-center">Curriculum Vitae</h1>
 </section>
