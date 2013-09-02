@@ -136,7 +136,7 @@ body {
   padding: 0;
   height: 100%;
 }
-@media (min-width: 320px) and (max-width: 479px) {
+@media (max-width: 479px) {
   /* line 19, ../../sass/_base.scss */
   body {
     font-size: 15px;
@@ -190,7 +190,7 @@ body {
 h1 {
   font-weight: 100;
 }
-@media (min-width: 320px) and (max-width: 479px) {
+@media (max-width: 479px) {
   /* line 29, ../../sass/_base.scss */
   h1 {
     font-size: 24px;
@@ -244,7 +244,7 @@ h1 {
 h2 {
   font-weight: 100;
 }
-@media (min-width: 320px) and (max-width: 479px) {
+@media (max-width: 479px) {
   /* line 34, ../../sass/_base.scss */
   h2 {
     font-size: 19px;
@@ -294,53 +294,53 @@ h2 {
   }
 }
 
-@media (min-width: 320px) and (max-width: 479px) {
+@media (max-width: 479px) {
   /* line 39, ../../sass/_base.scss */
   p {
     font-size: 15px;
-    line-height: 1em;
+    line-height: 24px;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   /* line 39, ../../sass/_base.scss */
   p {
     font-size: 16px;
-    line-height: 1em;
+    line-height: 26px;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   /* line 39, ../../sass/_base.scss */
   p {
     font-size: 19px;
-    line-height: 1em;
+    line-height: 30px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
   /* line 39, ../../sass/_base.scss */
   p {
     font-size: 19px;
-    line-height: 1em;
+    line-height: 30px;
   }
 }
 @media (min-width: 1281px) and (max-width: 1640px) {
   /* line 39, ../../sass/_base.scss */
   p {
     font-size: 19px;
-    line-height: 1em;
+    line-height: 30px;
   }
 }
 @media (min-width: 1641px) and (max-width: 1920px) {
   /* line 39, ../../sass/_base.scss */
   p {
     font-size: 21px;
-    line-height: 1em;
+    line-height: 34px;
   }
 }
 @media (min-width: 1921px) {
   /* line 39, ../../sass/_base.scss */
   p {
     font-size: 23px;
-    line-height: 1em;
+    line-height: 37px;
   }
 }
 
@@ -600,7 +600,11 @@ footer a {
   padding: 0 5%;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+/* line 6, ../../sass/_layout_portfolio.scss */
+.portfolio-element {
+  vertical-align: middle;
+}
+@media (max-width: 767px) {
   /* line 6, ../../sass/_layout_portfolio.scss */
   .portfolio-element {
     width: 100%;
@@ -619,58 +623,342 @@ footer a {
   }
 }
 
-/* line 11, ../../sass/_layout_portfolio.scss */
+/* line 12, ../../sass/_layout_portfolio.scss */
 .portfolio-label {
   overflow: hidden;
   display: block;
   cursor: pointer;
-  position: relative;
-  z-index: 1;
-  -webkit-transition: z-index 0s ease;
-  -webkit-transition-delay: 0.2s;
-  -moz-transition: z-index 0s ease 0.2s;
-  -o-transition: z-index 0s ease 0.2s;
-  transition: z-index 0s ease 0.2s;
+  color: #fdf7f8;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+/* line 18, ../../sass/_layout_portfolio.scss */
+.portfolio-label:hover {
+  color: #ff981a;
 }
 
-/* line 20, ../../sass/_layout_portfolio.scss */
+/* line 21, ../../sass/_layout_portfolio.scss */
 .portfolio-head {
   color: #fdf7f8;
 }
 
-/* line 24, ../../sass/_layout_portfolio.scss */
+/* line 25, ../../sass/_layout_portfolio.scss */
 .portfolio-img {
   width: 125%;
   margin-left: -12.5%;
 }
 
-/* line 29, ../../sass/_layout_portfolio.scss */
-.portfolio-info {
-  position: absolute;
-  width: 100%;
+/* line 30, ../../sass/_layout_portfolio.scss */
+.portfolio-info-wrapper {
+  position: fixed;
   height: 100%;
-  background: #564324;
+  background: #222222;
   color: #fdf7f8;
-  top: -110%;
-  left: 0;
-  -webkit-transition: top 0.5s ease;
-  -moz-transition: top 0.5s ease;
-  -o-transition: top 0.5s ease;
-  transition: top 0.5s ease;
-  z-index: 5;
+  top: 0;
+  left: 110%;
+  z-index: 25;
+  padding: 2rem;
+  -webkit-transition: left 0.5s ease;
+  -moz-transition: left 0.5s ease;
+  -o-transition: left 0.5s ease;
+  transition: left 0.5s ease;
 }
 
-/* line 41, ../../sass/_layout_portfolio.scss */
+/* line 42, ../../sass/_layout_portfolio.scss */
 .portfolio-input {
   display: none;
 }
-/* line 44, ../../sass/_layout_portfolio.scss */
-.portfolio-input:checked ~ .portfolio-info {
-  top: 0;
-}
 /* line 45, ../../sass/_layout_portfolio.scss */
-.portfolio-input:checked ~ .portfolio-label {
-  z-index: 10;
+.portfolio-input:checked ~ .portfolio-info-wrapper {
+  left: 0;
+}
+
+/* line 48, ../../sass/_layout_portfolio.scss */
+.portfolio-info {
+  float: right;
+}
+@media (max-width: 767px) {
+  /* line 48, ../../sass/_layout_portfolio.scss */
+  .portfolio-info {
+    height: auto;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  /* line 48, ../../sass/_layout_portfolio.scss */
+  .portfolio-info {
+    height: 100%;
+    width: 50%;
+  }
+}
+
+/* line 53, ../../sass/_layout_portfolio.scss */
+.portfolio-info-label {
+  cursor: pointer;
+  display: inline-block;
+}
+@media (max-width: 767px) {
+  /* line 53, ../../sass/_layout_portfolio.scss */
+  .portfolio-info-label {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  /* line 53, ../../sass/_layout_portfolio.scss */
+  .portfolio-info-label {
+    width: 47%;
+  }
+}
+/* line 57, ../../sass/_layout_portfolio.scss */
+.portfolio-info-label > *:not(.portfolio-info-close) {
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+/* line 59, ../../sass/_layout_portfolio.scss */
+.portfolio-info-label > *:not(.portfolio-info-close):hover {
+  color: #ff981a;
+}
+
+/* line 63, ../../sass/_layout_portfolio.scss */
+.portfolio-info-img {
+  width: 100%;
+}
+
+/* line 67, ../../sass/_layout_portfolio.scss */
+.portfolio-info-head {
+  margin-bottom: 2rem;
+}
+
+/* line 71, ../../sass/_layout_portfolio.scss */
+.portfolio-technics {
+  overflow: hidden;
+  padding: 1rem 0;
+  margin-top: 5rem;
+}
+
+/* line 77, ../../sass/_layout_portfolio.scss */
+.portfolio-technic {
+  float: left;
+  background-color: #fdf7f8;
+  color: #222222;
+  padding: 0.5rem 2rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  border-radius: 2rem;
+}
+@media (max-width: 479px) {
+  /* line 77, ../../sass/_layout_portfolio.scss */
+  .portfolio-technic {
+    font-size: 19px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  /* line 77, ../../sass/_layout_portfolio.scss */
+  .portfolio-technic {
+    font-size: 20px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* line 77, ../../sass/_layout_portfolio.scss */
+  .portfolio-technic {
+    font-size: 24px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* line 77, ../../sass/_layout_portfolio.scss */
+  .portfolio-technic {
+    font-size: 24px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1281px) and (max-width: 1640px) {
+  /* line 77, ../../sass/_layout_portfolio.scss */
+  .portfolio-technic {
+    font-size: 24px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1641px) and (max-width: 1920px) {
+  /* line 77, ../../sass/_layout_portfolio.scss */
+  .portfolio-technic {
+    font-size: 26px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1921px) {
+  /* line 77, ../../sass/_layout_portfolio.scss */
+  .portfolio-technic {
+    font-size: 29px;
+    line-height: 1em;
+  }
+}
+/* line 85, ../../sass/_layout_portfolio.scss */
+.portfolio-technic:last-of-type {
+  margin-right: 0;
+}
+
+/* line 89, ../../sass/_layout_portfolio.scss */
+.portfolio-action {
+  background-color: #ff981a;
+  color: #222222;
+  padding: 1rem 2rem;
+}
+/* line 92, ../../sass/_layout_portfolio.scss */
+.portfolio-action:hover {
+  background-color: #564324;
+}
+@media (max-width: 479px) {
+  /* line 89, ../../sass/_layout_portfolio.scss */
+  .portfolio-action {
+    font-size: 24px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  /* line 89, ../../sass/_layout_portfolio.scss */
+  .portfolio-action {
+    font-size: 26px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* line 89, ../../sass/_layout_portfolio.scss */
+  .portfolio-action {
+    font-size: 30px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* line 89, ../../sass/_layout_portfolio.scss */
+  .portfolio-action {
+    font-size: 30px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1281px) and (max-width: 1640px) {
+  /* line 89, ../../sass/_layout_portfolio.scss */
+  .portfolio-action {
+    font-size: 30px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1641px) and (max-width: 1920px) {
+  /* line 89, ../../sass/_layout_portfolio.scss */
+  .portfolio-action {
+    font-size: 34px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1921px) {
+  /* line 89, ../../sass/_layout_portfolio.scss */
+  .portfolio-action {
+    font-size: 37px;
+    line-height: 1em;
+  }
+}
+
+/* line 97, ../../sass/_layout_portfolio.scss */
+.portfolio-actions {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  bottom: 7.5rem;
+  left: 0;
+}
+/* line 104, ../../sass/_layout_portfolio.scss */
+.portfolio-actions .portfolio-action-source {
+  float: left;
+  margin-left: 2rem;
+}
+/* line 109, ../../sass/_layout_portfolio.scss */
+.portfolio-actions .portfolio-action-view {
+  float: right;
+  margin-right: 2rem;
+}
+
+/* line 115, ../../sass/_layout_portfolio.scss */
+.portfolio-info-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  color: #222222;
+  background-color: #fdf7f8;
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+@media (max-width: 479px) {
+  /* line 115, ../../sass/_layout_portfolio.scss */
+  .portfolio-info-close {
+    font-size: 19px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  /* line 115, ../../sass/_layout_portfolio.scss */
+  .portfolio-info-close {
+    font-size: 20px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* line 115, ../../sass/_layout_portfolio.scss */
+  .portfolio-info-close {
+    font-size: 24px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* line 115, ../../sass/_layout_portfolio.scss */
+  .portfolio-info-close {
+    font-size: 24px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1281px) and (max-width: 1640px) {
+  /* line 115, ../../sass/_layout_portfolio.scss */
+  .portfolio-info-close {
+    font-size: 24px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1641px) and (max-width: 1920px) {
+  /* line 115, ../../sass/_layout_portfolio.scss */
+  .portfolio-info-close {
+    font-size: 26px;
+    line-height: 1em;
+  }
+}
+@media (min-width: 1921px) {
+  /* line 115, ../../sass/_layout_portfolio.scss */
+  .portfolio-info-close {
+    font-size: 29px;
+    line-height: 1em;
+  }
+}
+/* line 126, ../../sass/_layout_portfolio.scss */
+.portfolio-info-close:hover {
+  background-color: #ff981a;
+  color: #222222 !important;
 }
 
 /* line 5, ../../sass/_layout.scss */
@@ -687,7 +975,7 @@ footer a {
   padding: 3rem 1rem;
   margin: 0;
 }
-@media (min-width: 320px) and (max-width: 479px) {
+@media (max-width: 479px) {
   /* line 9, ../../sass/_layout.scss */
   .quote {
     font-size: 24px;

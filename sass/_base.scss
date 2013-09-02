@@ -37,7 +37,7 @@ h2 {
 }
 
 p {
-  @include font-media($font-factor-text);
+  @include font-media($font-factor-text, true);
 }
 
 a {

@@ -5,6 +5,7 @@
 
 .portfolio-element {
   @extend %grid-cell;
+  vertical-align: middle;
   @include portfolio-element-width();
 }
 
@@ -12,9 +13,9 @@
   overflow: hidden;
   display: block;
   cursor: pointer;
-  position: relative;
-  z-index: 1;
-  @include transition(z-index 0s ease 0.2s);
+  color: $color-text-light;
+  @include transition(color 0.5s ease);
+  &:hover { color: $color-highlight-light; }
 }
 
 .portfolio-head {
@@ -26,21 +27,104 @@
   margin-left: -12.5%;
 }
 
-.portfolio-info {
-  position: absolute;
-  width: 100%;
+.portfolio-info-wrapper {
+  position: fixed;
   height: 100%;
-  background: $color-highlight-dark;
+  background: $color-text-dark;
   color: $color-text-light;
-  top: -110%;
-  left: 0;
-  @include transition(top 0.5s ease);
-  z-index: 5;
+  top: 0;
+  left: 110%;
+  z-index: 25;
+  padding: 2rem;
+  @include transition(left 0.5s ease);
 }
 
 .portfolio-input { 
   display: none; 
 
-  &:checked ~ .portfolio-info { top: 0; }
-  &:checked ~ .portfolio-label { z-index: 10; }
+  &:checked ~ .portfolio-info-wrapper { left: 0; }
+}
+
+.portfolio-info {
+  float: right;
+  @include portfolio-element-info-width();
+}
+
+.portfolio-info-label {
+  cursor: pointer;
+  display: inline-block;
+  @include portfolio-element-info-label-width();
+  > *:not(.portfolio-info-close){ 
+    @include transition(color 0.5s ease);
+    &:hover { color: $color-highlight-light; }
+  }
+}
+
+.portfolio-info-img {
+  width: 100%;
+}
+
+.portfolio-info-head { 
+  margin-bottom: 2rem; 
+}
+
+.portfolio-technics { 
+  overflow: hidden; 
+  padding: 1rem 0;
+  margin-top: 5rem;
+}
+
+.portfolio-technic {
+  float: left;
+  background-color: $color-text-light;
+  color: $color-text-dark;
+  @include font-media($font-factor-text-headline-sub);
+  padding: 0.5rem 2rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem; 
+  &:last-of-type { margin-right: 0; }
+  @include border-radius(2rem);
+}
+
+.portfolio-action {
+  background-color: $color-highlight-light;
+  color: $color-text-dark;
+  &:hover { background-color: $color-highlight-dark; }
+  padding: 1rem 2rem;
+  @include font-media($font-factor-text-headline);
+}
+
+.portfolio-actions {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  bottom: 7.5rem;
+  left: 0;
+
+  .portfolio-action-source {
+    float: left;
+    margin-left: 2rem;
+  }
+
+  .portfolio-action-view { 
+    float: right;
+    margin-right: 2rem;
+  }
+}
+
+.portfolio-info-close { 
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  color: $color-text-dark;
+  background-color: $color-text-light;
+  @include transition(background-color 0.5s ease);
+  @include border-radius(50%);
+  @include font-media($font-factor-text-headline-sub);
+  &:hover { 
+    background-color: $color-highlight-light; 
+    color: $color-text-dark !important;
+  }
 }
