@@ -348,6 +348,19 @@ li {
   list-style: none;
 }
 
+/* line 59, ../../sass/_base.scss */
+footer {
+  background-color: #222222;
+  color: #fdf7f8;
+  text-align: center;
+  margin-top: -3rem;
+  padding: 2rem;
+}
+/* line 66, ../../sass/_base.scss */
+footer a {
+  color: #ff981a;
+}
+
 /* line 1, ../../sass/_layout_nav.scss */
 .nav {
   position: fixed;
@@ -717,6 +730,7 @@ li {
 .page-header {
   margin-top: 0;
   color: #fdf7f8;
+  padding-top: 1rem;
 }
 
 /* line 1, ../../sass/_layout_nav.scss */

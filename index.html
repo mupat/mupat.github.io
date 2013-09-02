@@ -4,6 +4,46 @@ css: main
 avatar: 
   url: http://www.gravatar.com/avatar/1cdf632360a3bbd00dcf94268c9b6c12.png
   size: 200
+portfolio:
+  -
+    name: Ultimate Huskies
+    description: 
+      A wordpress site to represent my sports club 'Ultimate Huskies' - a ultimate frisbee team. It includes a forum for registered users. I was responsable from the design to the integration in wordpress, by creating an own theme. I'm still in charge for the maintenance. :)
+    technics:
+      - CSS3
+      - HTML5
+      - jQuery
+      - PHP 5 and Mysql
+      - photoshop
+      - less
+    source: https://github.com/Ultimate-Huskies/website
+    view: http://ultimate-huskies.de/
+    img: ultimate-huskies.png
+  -
+    name: Android Play Search
+    description: 
+      A project to establish a service to search in the play store by using just the bundle identifier via GET url. The response is easy readable JSON format, like the search API from iTunes. It's scraping the online available google play store, by using the microdata. Need to be deployed on own servers.
+    technics:
+      - node.io
+      - node.js
+      - coffeescript
+      - restify.js
+    source: https://github.com/Mupat/android-market-search
+    img: android-market-search.png
+  -
+    name: YANTRE
+    descriptions: 
+      Yet another new tab replacement extension for google chrome web browser. It adds an beautiful flip clock, combined with a check for unread google mail emails. Also includes different themes for the user to choose and quick access to the available chrome apps. I worked together with one awesome designer(<a href="https://github.com/mac-cypher">Mac Cypher</a>) on this project
+    technics:
+      - jquery
+      - handlebars.js
+      - less
+      - grunt.js
+      - CSS3
+      - HTML5
+      - moment.js
+    source: https://github.com/Mupat/yantre
+    img: yantre.png
 ---
 
 <section id="overview" class="page align-center">
@@ -13,7 +53,7 @@ avatar:
 <span class="page-next icon-portfolio-highlight"></span>
 <section id="portfolio" class="page page-highlight align-center">
   <h1 class="page-header  align-center">Portfolio</h1>
-  {% include portfolio.html %}
+  {% include portfolio.html portfolio = page.portfolio %}
 </section>
 <span class="page-next icon-portfolio"></span>
 <section id="skills" class="page align-center">

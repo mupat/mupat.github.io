@@ -1,52 +1,29 @@
----
-portfolio:
-  -
-    name: Ultimate Huskies
-    description: A wordpress site for representing my sports club 'Ultimate Huskies'. A ultimate frisbee team. It includes a forum for registered users. I was responsable from the design to the integration in wordpress, by creating an own theme. I'm still in charge for the maintenance. :)
-    technics:
-      - CSS3 and HTML5
-      - jQuery
-      - PHP 5 and Mysql
-      - photoshop
-    source: https://github.com/Ultimate-Huskies/website
-    view: http://ultimate-huskies.de/
-    img: ultimate-huskies.png
-  -
-    name: Android Play Search
-    description: A project to establish a service to search in the play store by using just the bundle identifier and get a response in JSON, like the search API from iTunes. Need to be deployed on own servers.
-    technics:
-      - node.io (screemscraper)
-      - node.js
-      - coffeescript
-    source: https://github.com/Mupat/android-market-search
----
-
-<ul class="gallery">
-  {% for gallery in page.portfolio %}
-    <li class="gallery-element">
-      <label class="galllery-label" for="gallery-{{ include.el.name }}">
-        <h2 class="gallery-head">{{ include.el.name }}</h2>
-        <img class="gallery-img" src="{{ sites.url }}/assets/images/{{ include.el.img }}"></img>
+<ul class="portfolio">
+  {% for project in include.portfolio %}
+    <li class="portfolio-element">
+      <label class="portfolio-label" for="portfolio-{{ project.name }}">
+        <h2 class="portfolio-head">{{ project.name }}</h2>
+        <img class="portfolio-img" src="{{ sites.url }}/assets/images/{{ project.img }}"></img>
       </label>
-      <input type="checkbox"  class="gallery-input" id="gallery-{{ include.el.name }}" />
-      <div class="gallery-info">
-        {% if include.el.description %}
-          <p class="gallery-description">{{ include.el.description }}</p>
+      <input type="checkbox"  class="portfolio-input" id="portfolio-{{ project.name }}" />
+      <div class="portfolio-info">
+        {% if project.description %}
+          <p class="portfolio-description">{{ project.description }}</p>
         {% endif %}
-        {% if include.el.technics %}
-        <ul class="gallery-technics">
-          {% for technic in include.el.technics %}
-            <li class="gallery-technic">{{ technic }}</li>
+        {% if project.technics %}
+        <ul class="portfolio-technics">
+          {% for technic in project.technics %}
+            <li class="portfolio-technic">{{ technic }}</li>
           {% endfor %}
         </ul>
         {% endif %}
-        {% if include.el.source or include.el.view %}
-          <div class="gallery-actions">
-            {% if include.el.source %}
-              <a class="gallery-action">{{ include.el.source }}</a>
+        {% if project.source or project.view %}
+          <div class="portfolio-actions">
+            {% if project.source %}
+              <a class="portfolio-action">{{ project.source }}</a>
             {% endif %}
-            {% if include.el.view %}
-              <a class="gallery-action">{{ include.el.view }}</a>
+            {% if project.view %}
+              <a class="portfolio-action">{{ project.view }}</a>
             {% endif %}
           </div>
         {% endif %}
