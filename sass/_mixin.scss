@@ -19,4 +19,11 @@
   #{$property}: -o-calc(#{$expression}); 
   #{$property}: -webkit-calc(#{$expression}); 
   #{$property}: calc(#{$expression}); 
-} 
+}
+
+@mixin portfolio-element-width {
+  $columns: 6;
+  @media (min-width: 320px) and (max-width: 767px) { width: grid-span(6); }
+  @media (min-width: 768px) and (max-width: 1279px) { width: grid-span(3); }
+  @media (min-width: 1280px) { width: grid-span(2); }
+}

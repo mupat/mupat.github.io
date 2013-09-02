@@ -1,0 +1,46 @@
+.portfolio {
+  @extend %grid;
+  padding: 0 5%;
+}
+
+.portfolio-element {
+  @extend %grid-cell;
+  @include portfolio-element-width();
+}
+
+.portfolio-label {
+  overflow: hidden;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  @include transition(z-index 0s ease 0.2s);
+}
+
+.portfolio-head {
+  color: $color-text-light;
+}
+
+.portfolio-img {
+  width: 125%;
+  margin-left: -12.5%;
+}
+
+.portfolio-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: $color-highlight-dark;
+  color: $color-text-light;
+  top: -110%;
+  left: 0;
+  @include transition(top 0.5s ease);
+  z-index: 5;
+}
+
+.portfolio-input { 
+  display: none; 
+
+  &:checked ~ .portfolio-info { top: 0; }
+  &:checked ~ .portfolio-label { z-index: 10; }
+}

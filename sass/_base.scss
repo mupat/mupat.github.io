@@ -4,6 +4,7 @@
 @import "mixin";
 @import "font";
 @import "compass/css3";
+@import "justifygrid";
 
 html {
   // -webkit-font-smoothing: antialiased;
@@ -32,7 +33,7 @@ h1 {
 
 h2 {
   @include font-media($font-factor-text-headline-sub);
-  font-weight: $font-weight-normal;
+  font-weight: $font-weight-thin;
 }
 
 p {

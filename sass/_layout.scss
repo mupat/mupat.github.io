@@ -1,5 +1,6 @@
 @import "compass/css3";
 @import "layout_nav";
+@import "layout_portfolio";
 
 .align-center { 
   text-align: center; 
@@ -38,6 +39,7 @@
   background-color: $color-base;
   width: 100%;
   position: relative;
+  overflow: hidden;
   @include calc(min-height, "100% - 7.5rem");
 }
 

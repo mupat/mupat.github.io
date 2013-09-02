@@ -1,11 +1,11 @@
-<ul class="portfolio">
+<div class="portfolio">
   {% for project in include.portfolio %}
-    <li class="portfolio-element">
-      <label class="portfolio-label" for="portfolio-{{ project.name }}">
-        <h2 class="portfolio-head">{{ project.name }}</h2>
-        <img class="portfolio-img" src="{{ sites.url }}/assets/images/{{ project.img }}"></img>
-      </label>
+    <div class="portfolio-element">
       <input type="checkbox"  class="portfolio-input" id="portfolio-{{ project.name }}" />
+      <h2 class="portfolio-head align-center">{{ project.name }}</h2>
+      <label class="portfolio-label" for="portfolio-{{ project.name }}">
+        <img class="portfolio-img" src="{{ sites.url }}/assets/images/{{ project.img }}" alt="portfolio image for {{ project.name }}"></img>
+      </label>
       <div class="portfolio-info">
         {% if project.description %}
           <p class="portfolio-description">{{ project.description }}</p>
@@ -28,8 +28,8 @@
           </div>
         {% endif %}
       </div>
-    </li>
+    </div>
   {% endfor %}
-</ul>
+</div>
 
 
