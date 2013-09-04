@@ -7,6 +7,7 @@
   @extend %grid-cell;
   vertical-align: middle;
   @include portfolio-element-width();
+  margin-bottom: 2rem;
 }
 
 .portfolio-head {
