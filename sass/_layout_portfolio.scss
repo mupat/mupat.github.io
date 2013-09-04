@@ -69,6 +69,7 @@
 
 // portfolio element detail information
 .portfolio-info-wrapper {
+  overflow: auto;
   position: fixed;
   @include calc(height, "100% - 4rem");
   @include calc(width, "100% - 4rem");
