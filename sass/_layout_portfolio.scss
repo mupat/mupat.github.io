@@ -9,27 +9,69 @@
   @include portfolio-element-width();
 }
 
-.portfolio-label {
-  overflow: hidden;
-  display: block;
-  cursor: pointer;
-  color: $color-text-light;
-  @include transition(color 0.5s ease);
-  &:hover { color: $color-highlight-light; }
-}
-
 .portfolio-head {
   color: $color-text-light;
 }
 
-.portfolio-img {
-  width: 125%;
-  margin-left: -12.5%;
+.portfolio-label-detail {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-size: 10rem;
+  background-color: transparent;
+  @include transition(background-color 0.5s ease);
+
+  &:before {
+    position: absolute;
+    top: 110%;
+    @include calc(left, "50% - 5rem");
+    color: $color-text-light;
+    @include transition(top 0.5s ease);
+  }
 }
 
+.portfolio-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include scale(1.25);
+}
+
+.portfolio-label {
+  overflow: hidden;
+  display: block;
+  cursor: pointer;
+  width: 25rem;
+  height: 25rem;
+  position: relative;
+  margin: 0 auto;
+  @include border-radius(50%);
+  
+  &:hover .portfolio-label-detail {
+    background-color: transparentize($color-highlight-dark, 0.25);
+    &:before { 
+      @include calc(top, "50% - 5rem");
+    }
+  }
+
+  &[for$="Ultimate Huskies"] .portfolio-img {
+    top: 25%;
+    left: -265%;
+  }
+
+  &[for$="YANTRE"] .portfolio-img {
+    top: 15%;
+    left: -200%;
+  }
+}
+
+// portfolio element detail information
 .portfolio-info-wrapper {
   position: fixed;
-  height: 100%;
+  @include calc(height, "100% - 4rem");
+  @include calc(width, "100% - 4rem");
   background: $color-text-dark;
   color: $color-text-light;
   top: 0;
@@ -47,13 +89,13 @@
 
 .portfolio-info {
   float: right;
-  @include portfolio-element-info-width();
+  @include portfolio-element-info-size();
 }
 
 .portfolio-info-label {
   cursor: pointer;
   display: inline-block;
-  @include portfolio-element-info-label-width();
+  
   > *:not(.portfolio-info-close){ 
     @include transition(color 0.5s ease);
     &:hover { color: $color-highlight-light; }
@@ -61,7 +103,7 @@
 }
 
 .portfolio-info-img {
-  width: 100%;
+  @include portfolio-element-info-img-width();
 }
 
 .portfolio-info-head { 
@@ -87,29 +129,12 @@
 }
 
 .portfolio-action {
-  background-color: $color-highlight-light;
-  color: $color-text-dark;
-  &:hover { background-color: $color-highlight-dark; }
-  padding: 1rem 2rem;
-  @include font-media($font-factor-text-headline);
+  color: $color-highlight-light;  
 }
 
 .portfolio-actions {
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
-  bottom: 7.5rem;
-  left: 0;
-
-  .portfolio-action-source {
-    float: left;
-    margin-left: 2rem;
-  }
-
-  .portfolio-action-view { 
-    float: right;
-    margin-right: 2rem;
-  }
+  overflow: hidden;  width: 100%;
+  @include font-media($font-factor-text-headline);
 }
 
 .portfolio-info-close { 
@@ -118,13 +143,8 @@
   right: 2rem;
   width: 3rem;
   height: 3rem;
-  color: $color-text-dark;
-  background-color: $color-text-light;
-  @include transition(background-color 0.5s ease);
-  @include border-radius(50%);
-  @include font-media($font-factor-text-headline-sub);
-  &:hover { 
-    background-color: $color-highlight-light; 
-    color: $color-text-dark !important;
-  }
+  color: $color-text-light;
+  @include transition(color 0.5s ease);
+  @include font-media($font-factor-text-headline);
+  &:hover { color: $color-highlight-light; }
 }

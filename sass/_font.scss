@@ -48,7 +48,6 @@ $fonts-path-mupat: "#{$fonts-path}mupat/";
   -webkit-font-smoothing: antialiased;
 }
 
-
 .icon-github:before {
   content: "\e000";
 }
@@ -57,27 +56,7 @@ $fonts-path-mupat: "#{$fonts-path}mupat/";
   content: "\e001";
 }
 
-.icon-home:before {
-  content: "\e003";
-}
-
-.icon-user:before {
-  content: "\e004";
-}
-
-.icon-portfolio:before {
-  content: "\e005";
-}
-
-.icon-close:before {
-  content: "\e00e";
-}
-
-.icon-open:before {
-  content: "\e00f";
-}
-
-.icon-cv-highlight:before {
+.icon-external:before {
   content: "\e00a";
 }
 
@@ -85,6 +64,22 @@ $fonts-path-mupat: "#{$fonts-path}mupat/";
   content: "\e00b";
 }
 
-.icon-portfolio-highlight:before {
+.icon-cv:before {
   content: "\e012";
+}
+
+.icon-skills:before {
+  content: "\e005";
+}
+
+.icon-portfolio:before {
+  content: "\e006";
+}
+
+.icon-details:before {
+  content: "\e003";
+}
+
+.icon-close:before {
+  content: "\e002";
 }

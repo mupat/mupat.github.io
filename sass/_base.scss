@@ -18,7 +18,7 @@ html {
 
 body {
   background-color: $color-base;
-  font-weight: $font-weight-normal;
+  font-weight: $font-weight-thin;
   color: $color-text-dark;
   margin: 0;
   padding: 0;
@@ -61,7 +61,6 @@ footer {
   background-color: $color-text-dark;
   color: $color-text-light;
   text-align: center;
-  margin-top: -3rem;
   padding: 2rem;
 
   a { color: $color-highlight-light; }
