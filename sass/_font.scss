@@ -9,18 +9,18 @@ $fonts-path-mupat: "#{$fonts-path}mupat/";
   font-weight: 100;
   src: local('Lato Hairline'), local('Lato-Hairline'), url("#{$fonts-path-lato}Lato-Hairline.woff") format('woff');
 }
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Lato Light'), local('Lato-Light'), url("#{$fonts-path-lato}Lato-Light.woff") format('woff');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url("#{$fonts-path-lato}Lato-Regular.woff") format('woff');
-}
+// @font-face {
+//   font-family: 'Lato';
+//   font-style: normal;
+//   font-weight: 300;
+//   src: local('Lato Light'), local('Lato-Light'), url("#{$fonts-path-lato}Lato-Light.woff") format('woff');
+// }
+// @font-face {
+//   font-family: 'Lato';
+//   font-style: normal;
+//   font-weight: 400;
+//   src: local('Lato Regular'), local('Lato-Regular'), url("#{$fonts-path-lato}Lato-Regular.woff") format('woff');
+// }
 
 @font-face {
   font-family: "mupat";
@@ -82,4 +82,12 @@ $fonts-path-mupat: "#{$fonts-path}mupat/";
 
 .icon-close:before {
   content: "\e002";
+}
+
+.icon-source:before {
+  content: "\e007";
+}
+
+.icon-view:before {
+  content: "\e00d";
 }

@@ -44,7 +44,7 @@ a {
   @include transition-property(color, background-color); 
   @include transition-duration(0.5s);
   text-decoration: none;
-  color: $color-text-dark;
+  color: $color-highlight-light;
   &:hover { color: $color-text-light; }
 }
 
@@ -63,6 +63,4 @@ footer {
   text-align: center;
   padding: 2rem;
   margin-top: -0.1rem;
-
-  a { color: $color-highlight-light; }
 }

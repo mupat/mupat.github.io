@@ -9,33 +9,39 @@
       </label>
       <div class="portfolio-info-wrapper">
         <h1 class="portfolio-info-head align-center">{{ project.name }}</h1>
-        <img class="portfolio-info-img" src="{{ sites.url }}/assets/images/{{ project.img }}" alt="portfolio image for {{ project.name }}"></img>
         <label class="portfolio-info-label portfolio-info-close icon-close" for="portfolio-{{ project.name }}"></label>
+        <div class="portfolio-info-img-wrapper">
+          <img class="portfolio-info-img" src="{{ sites.url }}/assets/images/{{ project.img }}" alt="portfolio image for {{ project.name }}"></img>
+          {% if project.source or project.view %}
+            <div class="portfolio-actions align-center">
+              {% if project.source %}
+                <a class="portfolio-action portfolio-action-source" href="{{ project.source }}" target="_blank">
+                  <span>View source</span>
+                  <i class="icon-source"></i>
+                </a>
+              {% endif %}
+              
+              {% if project.view %}
+                <a class="portfolio-action portfolio-action-view" href="{{ project.view }}" target="_blank">
+                  <i class="icon-view"></i>
+                  <span>Checkout project</span>
+                </a>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
         <div class="portfolio-info">
           {% if project.description %}
             <p class="portfolio-description">{{ project.description }}</p>
           {% endif %}
           {% if project.technics %}
-          <ul class="portfolio-technics">
+          <ul class="portfolio-technics align-center">
             {% for technic in project.technics %}
               <li class="portfolio-technic">{{ technic }}</li>
             {% endfor %}
           </ul>
           {% endif %}
         </div>
-        {% if project.source or project.view %}
-          <div class="portfolio-actions align-center">
-            {% if project.source %}
-              <a class="portfolio-action portfolio-action-source align-center" href="{{ project.source }}" target="_blank">source</a>
-            {% endif %}
-            {% if project.source and project.view %}
-            <span>|</span>
-            {% endif%}
-            {% if project.view %}
-              <a class="portfolio-action portfolio-action-view align-center" href="{{ project.view }}" target="_blank">view</a>
-            {% endif %}
-          </div>
-        {% endif %}
       </div>
     </li>
   {% endfor %}

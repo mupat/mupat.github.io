@@ -89,6 +89,11 @@
   &:checked ~ .portfolio-info-wrapper { left: 0; }
 }
 
+.portfolio-info-img-wrapper {
+  display: inline-block;
+  @include portfolio-element-info-img-width();
+}
+
 .portfolio-info {
   float: right;
   @include portfolio-element-info-size();
@@ -105,11 +110,12 @@
 }
 
 .portfolio-info-img {
-  @include portfolio-element-info-img-width();
+  width: 100%;  
 }
 
 .portfolio-info-head { 
   margin-bottom: 2rem; 
+  @include font-media($font-factor-text-title);
 }
 
 .portfolio-technics { 
@@ -119,7 +125,7 @@
 }
 
 .portfolio-technic {
-  float: left;
+  display: inline-block;
   background-color: $color-text-light;
   color: $color-text-dark;
   @include font-media($font-factor-text-headline-sub);
@@ -130,13 +136,42 @@
   @include border-radius(2rem);
 }
 
-.portfolio-action {
-  color: $color-highlight-light;  
+.portfolio-actions {
+  width: 100%;
+  margin-top: 2rem;
 }
 
-.portfolio-actions {
-  overflow: hidden;  width: 100%;
-  @include font-media($font-factor-text-headline);
+.portfolio-action {
+  @include font-media($font-factor-text-title);
+  position: relative;
+
+  span {
+    color: $color-text-light;
+    position: absolute;
+    top: -0.5rem;
+    @include font-media($font-factor-text-headline);
+    @include opacity(0);
+    visibility: hidden;
+    @include transition(opacity 0.3s ease, visibility 0.3s ease);
+  }
+
+  &:hover span {
+    @include opacity(1);
+    visibility: visible;
+  } 
+}
+
+.portfolio-action-source {
+  margin-right: 3rem;
+  span {
+    right: 7rem;
+  }
+}
+
+.portfolio-action-view {
+  span {
+    left: 7rem;
+  }
 }
 
 .portfolio-info-close { 
