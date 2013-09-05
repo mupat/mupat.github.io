@@ -1,0 +1,41 @@
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 20rem;
+  height: 20rem;
+  @include perspective(500);
+
+  &:hover {
+    .avatar-front {
+      @include rotateY(-180deg);
+      visibility: hidden;
+    }
+    .avatar-back {
+      @include rotateY(-180deg);
+      visibility: visible;
+    }
+  }
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include transition(transform 1s ease, visibility 0s ease 0.3s);
+}
+
+.avatar-front {
+  @include rotateY(0deg);
+  visibility: visible;
+}
+
+.avatar-back {
+  @include rotateY(0deg);
+  visibility: hidden;
+}
+
+.avatar-highlight { 
+  @include border-radius(50%);
+}

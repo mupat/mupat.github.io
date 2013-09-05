@@ -4,7 +4,9 @@
       <input type="checkbox"  class="portfolio-input" id="portfolio-{{ project.name }}" />
       <h2 class="portfolio-head align-center">{{ project.name }}</h2>
       <label class="portfolio-label align-center" for="portfolio-{{ project.name }}">
-        <img class="portfolio-img" src="{{ sites.url }}/assets/images/{{ project.img }}" alt="portfolio image for {{ project.name }}"></img>
+        {% assign logo = project.img %}
+        {% if project.logo %} {% assign logo = project.logo %} {% endif %}
+        <img class="portfolio-logo" src="{{ sites.url }}/assets/images/{{ logo }}" alt="portfolio image for {{ project.name }}"></img>
         <span class="portfolio-label-detail icon-details"></span>
       </label>
       <div class="portfolio-info-wrapper">
@@ -20,8 +22,7 @@
                   <i class="icon-source"></i>
                 </a>
               {% endif %}
-              
-              {% if project.view %}
+              {% if project.view != ''%}
                 <a class="portfolio-action portfolio-action-view" href="{{ project.view }}" target="_blank">
                   <i class="icon-view"></i>
                   <span>Checkout project</span>

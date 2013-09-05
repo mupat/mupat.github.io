@@ -1,6 +1,8 @@
 @import "compass/css3";
 @import "layout_nav";
 @import "layout_portfolio";
+@import "layout_avatar";
+@import "layout_page";
 
 .align-center { 
   text-align: center; 
@@ -25,95 +27,3 @@
   position: fixed;
   bottom: 3rem;
 }
-
-.avatar {
-  width: 20rem;
-  height: 20rem;
-}
-
-.avatar-highlight { 
-  @include border-radius(50%);
-}
-
-.page {
-  background-color: $color-base;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  @include calc(min-height, "100% - 7.5rem");
-}
-
-.page-highlight {
-  background-color: $color-highlight-dark;
-}
-
-.page-next {
-  background-color: $color-base;
-  position: relative;
-  display: block;
-  text-align: center;
-  height: 7.5rem;
-  width: 100%; 
-  margin-top: -0.1rem;
-
-  &:before {
-    color: $color-text-light;
-    position: absolute;
-    z-index: 10;
-    font-size: 4rem;
-    top: 2.5rem;
-    @include calc(left, "50% - 2.5rem");
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    border-bottom: 7.5rem solid $color-base;
-    border-right: 7.5rem solid transparent;
-    border-left: 7.5rem solid transparent;
-    top: 0.1rem;
-    @include calc(left, "50% - 7.5rem");
-    z-index: 5;
-  }
-}
-
-.page:not(.page-highlight) + .page-next:after { border-bottom-color: $color-highlight-dark; }
-.page-highlight + .page-next { background-color: $color-highlight-dark; }
-
-.page-header {
-  margin-top: 0;
-  color: $color-text-light;
-  padding-top: 1rem;
-}
-
-// .btn {
-//   background: $color-text-light;
-//   padding: 2rem 1rem;
-//   width: 30%;
-//   display: block;
-//   margin: 5rem auto;
-//   min-width: 25rem;
-//   @include font-media($font-factor-text-headline-sub);
-// }
-
-// .btn-highlight {
-//   color: $color-text-light;
-//   background-color: $color-highlight-light;
-//   &:hover { background-color: $color-highlight-dark; }
-//   font-weight: $font-weight-thin;
-// }
-
-// .btn-icon {
-//   &:before {
-//     float: left;
-//     margin-left: 1rem;
-//     position: relative;
-//     top: -1rem;
-//     @include font-media($font-factor-text-title);
-//   }
-// }
-
-// .btn-highlight-invert {
-//   background-color: $color-highlight-dark;
-//   &:hover { background-color: $color-highlight-light; }
-// }

@@ -33,13 +33,6 @@
   }
 }
 
-.portfolio-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  @include scale(1.25);
-}
-
 .portfolio-label {
   overflow: hidden;
   display: block;
@@ -48,6 +41,7 @@
   height: 25rem;
   position: relative;
   margin: 0 auto;
+  background-color: $color-text-light;
   @include border-radius(50%);
   
   &:hover .portfolio-label-detail {
@@ -177,7 +171,7 @@
 .portfolio-info-close { 
   position: absolute;
   top: 2rem;
-  right: 2rem;
+  left: 2rem;
   width: 3rem;
   height: 3rem;
   color: $color-text-light;

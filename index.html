@@ -4,6 +4,7 @@ css: main
 avatar: 
   url: http://www.gravatar.com/avatar/1cdf632360a3bbd00dcf94268c9b6c12.png
   size: 200
+logo:  mupat_logo.png
 portfolio:
   -
     name: Ultimate Huskies
@@ -19,7 +20,8 @@ portfolio:
       - less
     source: https://github.com/Ultimate-Huskies/website
     view: http://ultimate-huskies.de/
-    img: ultimate-huskies.png
+    img: ultimate_huskies.png
+    logo: ultimate_huskies_logo.png
   -
     name: Android Market Search
     description: 
@@ -30,7 +32,7 @@ portfolio:
       - coffeescript
       - restify.js
     source: https://github.com/Mupat/android-market-search
-    img: android-market-search.png
+    img: android_market_search.png
   -
     name: YANTRE
     description: 
@@ -46,15 +48,35 @@ portfolio:
       - coffeescript
     source: https://github.com/Mupat/yantre
     img: yantre.png
+    logo: yantre_logo.png
+  -
+    name: Mupat
+    description:
+      You guessed it already, yes it is this site. It's a one page html site to represent me and my work.<br /><br /> I'd like to notice, that i use no javascript on this site at all! Why? Because i can... :)
+    technics:
+      - CSS3
+      - HTML5
+      - jekyll
+      - liquid template
+      - github pages
+      - sass (compass)
+      - YAML
+    source: https://github.com/Mupat/mupat.github.io
+    view: #
+    img: mupat.png
+    logo: mupat_logo.png
 ---
 
 <section id="overview" class="page align-center">
-  <img class="avatar avatar-highlight" src="{{ page.avatar.url }}?s={{ page.avatar.size }}" alt="avatar for mupat">
+  <div class="avatar-wrapper">
+    <img class="avatar avatar-highlight avatar-front" src="{{ page.avatar.url }}?s={{ page.avatar.size }}" alt="avatar for mupat">
+    <img class="avatar avatar-highlight avatar-back" src="{{ site.url }}/assets/images/{{ page.logo }}" alt="logo for mupat">
+  </div>
   <h1>Hi, i'm a software developer with passion for design</h1>
 </section>
 <span class="page-next icon-portfolio"></span>
 <section id="portfolio" class="page page-highlight align-center">
-  <h1 class="page-header  align-center">Portfolio</h1>
+  <h1 class="page-header align-center">Portfolio</h1>
   {% include portfolio.html portfolio = page.portfolio %}
 </section>
 <span class="page-next icon-skills"></span>
