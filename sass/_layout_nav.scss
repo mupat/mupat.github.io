@@ -1,7 +1,7 @@
 .nav {
   position: fixed;
-  width: 100%;
-  bottom: 0;
+  top: 0;
+  right: 0;
   z-index: 500;
 }
 
@@ -11,16 +11,20 @@
   font-size: 5rem;
   bottom: -5rem;
   background-color: $color-text-light;
+  @include transition(box-shadow 0.5s ease);
   z-index: 15;
   width: 10rem;
   height: 10rem;
   @include calc(left, "50% - 5rem");
   border-radius: 50%;
 
+  &:hover {
+    @include box-shadow(0 0 0.5rem 0.1rem transparentize($color-highlight-dark, 0.5));
+  }
   &:before {
     position: absolute;
-    top: 1rem;
-    left: 3.5rem;
+    top: 5.5rem;
+    left: 1rem;
     font-size: 3rem;
   }
 }
@@ -41,10 +45,13 @@
 .nav-input { 
   display: none; 
   &:checked {
-    +.nav-button:before { content: '\e00e'; }
+    ~.nav-button {
+      @include box-shadow(0 0 0.5rem 0.1rem transparentize($color-highlight-dark, 0.5));
+    }
+
     ~.nav-wrapper { 
       @include scale(1.0); 
-      bottom: -0.5rem;
+      top: -0.5rem;
     }
     ~.nav-overlay { 
       opacity: 1; 
@@ -58,7 +65,7 @@
   height: 16rem;
   width: 100%;
   z-index: 10;
-  bottom: -7.25rem;
+  top: -7.25rem;
   border-radius: 50%;
   @include scale(0.1);
   @include transition-property(scale, bottom);
@@ -71,34 +78,22 @@
     @include transform-origin(100%, 100%);
     overflow: hidden;
     @include calc(left, "50% - 30rem");
-    bottom: 0;
+    bottom: 100%;
 
     &:first-child {
-      @include transform(rotate(0deg) skew(60deg));
+      @include transform(rotate(-30deg) skew(60deg));
     }
      
      &:nth-child(2) {
-       @include transform(rotate(30deg) skew(60deg));
+       @include transform(rotate(-60deg) skew(60deg));
     }
      
     &:nth-child(3) {
-       @include transform(rotate(60deg) skew(60deg));
-    }
-     
-    &:nth-child(4) {
-       @include transform(rotate(90deg) skew(60deg));
-    }
-     
-    &:nth-child(5) {
-       @include transform(rotate(120deg) skew(60deg));
-    }
-    &:nth-child(6) {
-       @include transform(rotate(150deg) skew(60deg));
+       @include transform(rotate(-90deg) skew(60deg));
     }
 
     &:nth-child(even) a {
       background-color: $color-highlight-light;
-      &.nav-extern { background-color: $color-highlight-dark; }
     }
      
     .nav-list-link {
@@ -119,7 +114,9 @@
       @include transition(color 0.5s, background-color 0.5s);
 
       > span {
+        @include scale(-1, -1);
         position: relative;
+        display: block;
         left: -1rem;
       }
 

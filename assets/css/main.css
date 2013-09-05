@@ -376,8 +376,8 @@ footer {
 /* line 1, ../../sass/_layout_nav.scss */
 .nav {
   position: fixed;
-  width: 100%;
-  bottom: 0;
+  top: 0;
+  right: 0;
   z-index: 500;
 }
 
@@ -388,6 +388,10 @@ footer {
   font-size: 5rem;
   bottom: -5rem;
   background-color: #fdf7f8;
+  -webkit-transition: box-shadow 0.5s ease;
+  -moz-transition: box-shadow 0.5s ease;
+  -o-transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease;
   z-index: 15;
   width: 10rem;
   height: 10rem;
@@ -397,15 +401,21 @@ footer {
   left: calc(50% - 5rem);
   border-radius: 50%;
 }
-/* line 20, ../../sass/_layout_nav.scss */
+/* line 21, ../../sass/_layout_nav.scss */
+.nav-button:hover {
+  -webkit-box-shadow: 0 0 0.5rem 0.1rem rgba(34, 34, 34, 0.5);
+  -moz-box-shadow: 0 0 0.5rem 0.1rem rgba(34, 34, 34, 0.5);
+  box-shadow: 0 0 0.5rem 0.1rem rgba(34, 34, 34, 0.5);
+}
+/* line 24, ../../sass/_layout_nav.scss */
 .nav-button:before {
   position: absolute;
-  top: 1rem;
-  left: 3.5rem;
+  top: 5.5rem;
+  left: 1rem;
   font-size: 3rem;
 }
 
-/* line 28, ../../sass/_layout_nav.scss */
+/* line 32, ../../sass/_layout_nav.scss */
 .nav-overlay {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
@@ -422,36 +432,38 @@ footer {
   transition: opacity 0.5s ease;
 }
 
-/* line 41, ../../sass/_layout_nav.scss */
+/* line 45, ../../sass/_layout_nav.scss */
 .nav-input {
   display: none;
 }
-/* line 44, ../../sass/_layout_nav.scss */
-.nav-input:checked + .nav-button:before {
-  content: '\e00e';
+/* line 48, ../../sass/_layout_nav.scss */
+.nav-input:checked ~ .nav-button {
+  -webkit-box-shadow: 0 0 0.5rem 0.1rem rgba(34, 34, 34, 0.5);
+  -moz-box-shadow: 0 0 0.5rem 0.1rem rgba(34, 34, 34, 0.5);
+  box-shadow: 0 0 0.5rem 0.1rem rgba(34, 34, 34, 0.5);
 }
-/* line 45, ../../sass/_layout_nav.scss */
+/* line 52, ../../sass/_layout_nav.scss */
 .nav-input:checked ~ .nav-wrapper {
   -webkit-transform: scale(1, 1);
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   -o-transform: scale(1, 1);
   transform: scale(1, 1);
-  bottom: -0.5rem;
+  top: -0.5rem;
 }
-/* line 49, ../../sass/_layout_nav.scss */
+/* line 56, ../../sass/_layout_nav.scss */
 .nav-input:checked ~ .nav-overlay {
   opacity: 1;
   visibility: visible;
 }
 
-/* line 56, ../../sass/_layout_nav.scss */
+/* line 63, ../../sass/_layout_nav.scss */
 .nav-wrapper {
   position: absolute;
   height: 16rem;
   width: 100%;
   z-index: 10;
-  bottom: -7.25rem;
+  top: -7.25rem;
   border-radius: 50%;
   -webkit-transform: scale(0.1, 0.1);
   -moz-transform: scale(0.1, 0.1);
@@ -467,7 +479,7 @@ footer {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 67, ../../sass/_layout_nav.scss */
+/* line 74, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element {
   position: absolute;
   width: 30rem;
@@ -482,65 +494,37 @@ footer {
   left: -o-calc(50% - 30rem);
   left: -webkit-calc(50% - 30rem);
   left: calc(50% - 30rem);
-  bottom: 0;
+  bottom: 100%;
 }
-/* line 76, ../../sass/_layout_nav.scss */
+/* line 83, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element:first-child {
-  -webkit-transform: rotate(0deg) skew(60deg);
-  -moz-transform: rotate(0deg) skew(60deg);
-  -ms-transform: rotate(0deg) skew(60deg);
-  -o-transform: rotate(0deg) skew(60deg);
-  transform: rotate(0deg) skew(60deg);
+  -webkit-transform: rotate(-30deg) skew(60deg);
+  -moz-transform: rotate(-30deg) skew(60deg);
+  -ms-transform: rotate(-30deg) skew(60deg);
+  -o-transform: rotate(-30deg) skew(60deg);
+  transform: rotate(-30deg) skew(60deg);
 }
-/* line 80, ../../sass/_layout_nav.scss */
+/* line 87, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element:nth-child(2) {
-  -webkit-transform: rotate(30deg) skew(60deg);
-  -moz-transform: rotate(30deg) skew(60deg);
-  -ms-transform: rotate(30deg) skew(60deg);
-  -o-transform: rotate(30deg) skew(60deg);
-  transform: rotate(30deg) skew(60deg);
+  -webkit-transform: rotate(-60deg) skew(60deg);
+  -moz-transform: rotate(-60deg) skew(60deg);
+  -ms-transform: rotate(-60deg) skew(60deg);
+  -o-transform: rotate(-60deg) skew(60deg);
+  transform: rotate(-60deg) skew(60deg);
 }
-/* line 84, ../../sass/_layout_nav.scss */
+/* line 91, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element:nth-child(3) {
-  -webkit-transform: rotate(60deg) skew(60deg);
-  -moz-transform: rotate(60deg) skew(60deg);
-  -ms-transform: rotate(60deg) skew(60deg);
-  -o-transform: rotate(60deg) skew(60deg);
-  transform: rotate(60deg) skew(60deg);
-}
-/* line 88, ../../sass/_layout_nav.scss */
-.nav-wrapper .nav-list-element:nth-child(4) {
-  -webkit-transform: rotate(90deg) skew(60deg);
-  -moz-transform: rotate(90deg) skew(60deg);
-  -ms-transform: rotate(90deg) skew(60deg);
-  -o-transform: rotate(90deg) skew(60deg);
-  transform: rotate(90deg) skew(60deg);
-}
-/* line 92, ../../sass/_layout_nav.scss */
-.nav-wrapper .nav-list-element:nth-child(5) {
-  -webkit-transform: rotate(120deg) skew(60deg);
-  -moz-transform: rotate(120deg) skew(60deg);
-  -ms-transform: rotate(120deg) skew(60deg);
-  -o-transform: rotate(120deg) skew(60deg);
-  transform: rotate(120deg) skew(60deg);
+  -webkit-transform: rotate(-90deg) skew(60deg);
+  -moz-transform: rotate(-90deg) skew(60deg);
+  -ms-transform: rotate(-90deg) skew(60deg);
+  -o-transform: rotate(-90deg) skew(60deg);
+  transform: rotate(-90deg) skew(60deg);
 }
 /* line 95, ../../sass/_layout_nav.scss */
-.nav-wrapper .nav-list-element:nth-child(6) {
-  -webkit-transform: rotate(150deg) skew(60deg);
-  -moz-transform: rotate(150deg) skew(60deg);
-  -ms-transform: rotate(150deg) skew(60deg);
-  -o-transform: rotate(150deg) skew(60deg);
-  transform: rotate(150deg) skew(60deg);
-}
-/* line 99, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element:nth-child(even) a {
   background-color: #ff981a;
 }
-/* line 101, ../../sass/_layout_nav.scss */
-.nav-wrapper .nav-list-element:nth-child(even) a.nav-extern {
-  background-color: #222222;
-}
-/* line 104, ../../sass/_layout_nav.scss */
+/* line 99, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element .nav-list-link {
   background-color: #ff8d00;
   font-size: 3rem;
@@ -564,20 +548,26 @@ footer {
   -o-transition: color 0.5s, background-color 0.5s;
   transition: color 0.5s, background-color 0.5s;
 }
-/* line 106, ../../sass/_layout_nav.scss */
+/* line 101, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element .nav-list-link:hover {
   background-color: #222222;
 }
-/* line 121, ../../sass/_layout_nav.scss */
+/* line 116, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element .nav-list-link > span {
+  -webkit-transform: scale(-1, -1);
+  -moz-transform: scale(-1, -1);
+  -ms-transform: scale(-1, -1);
+  -o-transform: scale(-1, -1);
+  transform: scale(-1, -1);
   position: relative;
+  display: block;
   left: -1rem;
 }
-/* line 126, ../../sass/_layout_nav.scss */
+/* line 123, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element .nav-list-link.nav-extern {
   background-color: #1d1d1d;
 }
-/* line 128, ../../sass/_layout_nav.scss */
+/* line 125, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element .nav-list-link.nav-extern:hover {
   background-color: #ff981a;
 }
