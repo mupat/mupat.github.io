@@ -47,6 +47,7 @@ portfolio:
       - moment.js
       - coffeescript
     source: https://github.com/Mupat/yantre
+    view: https://chrome.google.com/webstore/detail/yantre/mooemjhcefegelobcffkkgpifpkklibg
     img: yantre.png
     logo: yantre_logo.png
   -
@@ -65,6 +66,33 @@ portfolio:
     view: ' '
     img: mupat.png
     logo: mupat_logo.png
+skills:
+  html5: 5
+  css3: 5
+  less: 4
+  sass: 4
+  javascript: 5
+  coffeescript: 5
+  node.js: 4
+  PHP: 4
+  TDD: 3
+  mocha.js: 4
+  shell: 3
+  git: 3
+  vagrant: 3
+  jekyll: 2
+  grunt.js: 3
+  mysql: 4
+  backbone.js: 3
+  restify.js: 3
+  redis: 4
+  zeromq: 1
+  handlebars: 3
+  jade: 2
+  express.js: 3
+  symfony2: 2
+  jquery: 5
+  liquid: 2
 ---
 
 <section id="overview" class="page align-center">
@@ -82,8 +110,9 @@ portfolio:
 <span class="page-next icon-skills"></span>
 <section id="skills" class="page align-center">
   <h1 class="page-header  align-center">Skills</h1>
+  {% include skills.html skills = page.skills %}
 </section>
-<span class="page-next icon-cv"></span>
+<!-- <span class="page-next icon-cv"></span>
 <section id="curriculum-vitae" class="page page-highlight align-center">
   <h1 class="page-header  align-center">Curriculum Vitae</h1>
-</section>
+</section> -->

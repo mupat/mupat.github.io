@@ -127,7 +127,6 @@
   margin-right: 1rem;
   margin-bottom: 1rem; 
   &:last-of-type { margin-right: 0; }
-  @include border-radius(2rem);
 }
 
 .portfolio-actions {
@@ -144,15 +143,8 @@
     position: absolute;
     top: -0.5rem;
     @include font-media($font-factor-text-headline);
-    @include opacity(0);
-    visibility: hidden;
     @include transition(opacity 0.3s ease, visibility 0.3s ease);
   }
-
-  &:hover span {
-    @include opacity(1);
-    visibility: visible;
-  } 
 }
 
 .portfolio-action-source {

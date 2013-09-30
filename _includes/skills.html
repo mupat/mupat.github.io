@@ -1,0 +1,9 @@
+<ul class="skills">
+  {% for skill in include.skills %}
+    {% assign name = skill[0] %}
+    {% assign level = skill[1] %}
+    <li class="skill skill-level-{{level}}">
+      {{ name }}
+    </li>
+  {% endfor %}
+</ul>
