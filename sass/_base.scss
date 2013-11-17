@@ -7,7 +7,7 @@
 @import "justifygrid";
 
 html {
-  // -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   font: {
     family: $font-family;
     size: 62.5%; // normalize 1rem to 10px
@@ -57,19 +57,21 @@ li {
   list-style: none;
 }
 
+.footer-img {
+  position: relative;
+  width: 100%;
+  margin-bottom: -1.25rem;
+  line-height: 0;
+  text-align: center;
+  img {
+    max-width: 100%;
+  }
+}
+
 footer {
   background-color: #000000;
   color: $color-text-light;
   text-align: center;
   padding: 2rem;
-  margin-top: -0.1rem;
   position: relative;
-
-  .footer-img {
-    position: absolute;
-    width: 100%;
-    margin: 0 auto;
-    top: -12.5rem;
-    left: 0;
-  }
 }

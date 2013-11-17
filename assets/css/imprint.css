@@ -1,11 +1,5 @@
 @charset "UTF-8";
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 100;
-  src: local("Lato Hairline"), local("Lato-Hairline"), url("../fonts/lato/Lato-Hairline.woff") format("woff");
-}
-
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
 @font-face {
   font-family: "mupat";
   src: url("../fonts/mupat/mupat.eot");
@@ -14,7 +8,7 @@
   font-style: normal;
 }
 
-/* line 37, ../../sass/_font.scss */
+/* line 20, ../../sass/_font.scss */
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   font-family: "mupat";
@@ -30,57 +24,57 @@
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 51, ../../sass/_font.scss */
+/* line 34, ../../sass/_font.scss */
 .icon-github:before {
   content: "\e000";
 }
 
-/* line 55, ../../sass/_font.scss */
+/* line 38, ../../sass/_font.scss */
 .icon-xing:before {
   content: "\e001";
 }
 
-/* line 59, ../../sass/_font.scss */
+/* line 42, ../../sass/_font.scss */
 .icon-external:before {
   content: "\e00a";
 }
 
-/* line 63, ../../sass/_font.scss */
+/* line 46, ../../sass/_font.scss */
 .icon-mail:before {
   content: "\e00b";
 }
 
-/* line 67, ../../sass/_font.scss */
+/* line 50, ../../sass/_font.scss */
 .icon-cv:before {
   content: "\e012";
 }
 
-/* line 71, ../../sass/_font.scss */
+/* line 54, ../../sass/_font.scss */
 .icon-skills:before {
   content: "\e005";
 }
 
-/* line 75, ../../sass/_font.scss */
+/* line 58, ../../sass/_font.scss */
 .icon-portfolio:before {
   content: "\e006";
 }
 
-/* line 79, ../../sass/_font.scss */
+/* line 62, ../../sass/_font.scss */
 .icon-details:before {
   content: "\e003";
 }
 
-/* line 83, ../../sass/_font.scss */
+/* line 66, ../../sass/_font.scss */
 .icon-close:before {
   content: "\e002";
 }
 
-/* line 87, ../../sass/_font.scss */
+/* line 70, ../../sass/_font.scss */
 .icon-source:before {
   content: "\e007";
 }
 
-/* line 91, ../../sass/_font.scss */
+/* line 74, ../../sass/_font.scss */
 .icon-view:before {
   content: "\e00d";
 }
@@ -112,6 +106,7 @@
 
 /* line 9, ../../sass/_base.scss */
 html {
+  -webkit-font-smoothing: antialiased;
   font-family: "Lato", sans-serif;
   font-size: 62.5%;
   vertical-align: baseline;
@@ -121,7 +116,7 @@ html {
 /* line 19, ../../sass/_base.scss */
 body {
   background-color: #61cc61;
-  font-weight: 100;
+  font-weight: 300;
   color: #222222;
   margin: 0;
   padding: 0;
@@ -179,7 +174,7 @@ body {
 
 /* line 29, ../../sass/_base.scss */
 h1 {
-  font-weight: 100;
+  font-weight: 300;
 }
 @media (max-width: 479px) {
   /* line 29, ../../sass/_base.scss */
@@ -233,7 +228,7 @@ h1 {
 
 /* line 34, ../../sass/_base.scss */
 h2 {
-  font-weight: 100;
+  font-weight: 300;
 }
 @media (max-width: 479px) {
   /* line 34, ../../sass/_base.scss */
@@ -365,21 +360,25 @@ li {
 }
 
 /* line 60, ../../sass/_base.scss */
+.footer-img {
+  position: relative;
+  width: 100%;
+  margin-bottom: -1.25rem;
+  line-height: 0;
+  text-align: center;
+}
+/* line 66, ../../sass/_base.scss */
+.footer-img img {
+  max-width: 100%;
+}
+
+/* line 71, ../../sass/_base.scss */
 footer {
   background-color: #000000;
   color: #fdf7f8;
   text-align: center;
   padding: 2rem;
-  margin-top: -0.1rem;
   position: relative;
-}
-/* line 68, ../../sass/_base.scss */
-footer .footer-img {
-  position: absolute;
-  width: 100%;
-  margin: 0 auto;
-  top: -12.5rem;
-  left: 0;
 }
 
 /* line 1, ../../sass/_layout_nav.scss */
@@ -1547,7 +1546,7 @@ footer .footer-img {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-weight: 100;
+  font-weight: 300;
   padding: 3rem 1rem;
   margin: 0;
 }
@@ -1813,4 +1812,37 @@ footer .footer-img {
 /* line 126, ../../sass/_layout_nav.scss */
 .nav-wrapper .nav-list-element .nav-list-link.nav-extern:hover {
   background-color: #ff981a;
+}
+
+/* line 5, ../../sass/imprint.scss */
+.page {
+  min-height: -moz-calc(100% - 19rem);
+  min-height: -o-calc(100% - 19rem);
+  min-height: -webkit-calc(100% - 19rem);
+  min-height: calc(100% - 19rem);
+}
+
+/* line 10, ../../sass/imprint.scss */
+dl dt,
+dl dd {
+  display: inline-block;
+  min-width: 20rem;
+  text-align: left;
+  margin-bottom: 2rem;
+  vertical-align: top;
+}
+/* line 17, ../../sass/imprint.scss */
+dl dt a,
+dl dd a {
+  color: #222222;
+}
+/* line 19, ../../sass/imprint.scss */
+dl dt a:hover,
+dl dd a:hover {
+  color: #fdf7f8;
+}
+/* line 24, ../../sass/imprint.scss */
+dl dt address,
+dl dd address {
+  font-style: normal;
 }

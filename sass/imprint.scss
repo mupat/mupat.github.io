@@ -1,3 +1,27 @@
 @import "base";
 @import "layout";
 @import "layout_nav";
+
+.page {
+  @include calc(min-height, "100% - 19rem");
+}
+
+dl dt,
+dl dd {
+  display: inline-block;
+  min-width: 20rem;
+  text-align: left;
+  margin-bottom: 2rem;
+  vertical-align: top;
+
+  a {
+    color: $color-text-dark;
+    &:hover {
+      color: $color-text-light;
+    }
+  }
+
+  address {
+    font-style: normal;
+  }
+}

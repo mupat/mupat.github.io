@@ -2,6 +2,41 @@
 layout: default
 css: imprint
 title: imprint
+avatar: 
+  url: http://www.gravatar.com/avatar/1cdf632360a3bbd00dcf94268c9b6c12.png
+  size: 200
+logo:  mupat_logo.png
 ---
 
-<h1 class="align-center">Imprint</h1>
+<section id="imprint" class="page align-center">
+  <h1>Imprint</h1>
+  <div class="avatar-wrapper">
+    <img class="avatar avatar-highlight avatar-front" src="{{ page.avatar.url }}?s={{ page.avatar.size }}" alt="avatar for mupat">
+    <img class="avatar avatar-highlight avatar-back" src="{{ site.url }}/assets/images/{{ page.logo }}" alt="logo for mupat">
+  </div>
+  <dl>
+    <div>
+      <dt>Developer & Designer</dt>
+      <dd>Patrick Müller</dd>
+    </div>
+    <div>
+      <dt>Address</dt>
+      <dd>
+        <address>
+          Vicki-Baum-Str. 2 <br />  
+          10317 Berlin, Germany
+        </address>
+      </dd>
+    </div>
+    <div>
+      <dt>E-Mail</dt>
+      <dd><a href="mailto:i@mupat.net">i [at] mupat [dot] net</a></dd>
+    </div>
+    <div>
+      <dt>Phone</dt>
+      <dd>+49 160 96621765</dd>
+    </div>
+  </dl>
+</section>
+
+

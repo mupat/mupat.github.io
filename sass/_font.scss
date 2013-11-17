@@ -3,24 +3,7 @@ $fonts-path-lato: "#{$fonts-path}lato/";
 $fonts-path-mupat: "#{$fonts-path}mupat/";
 
 // google web font Lato
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 100;
-  src: local('Lato Hairline'), local('Lato-Hairline'), url("#{$fonts-path-lato}Lato-Hairline.woff") format('woff');
-}
-// @font-face {
-//   font-family: 'Lato';
-//   font-style: normal;
-//   font-weight: 300;
-//   src: local('Lato Light'), local('Lato-Light'), url("#{$fonts-path-lato}Lato-Light.woff") format('woff');
-// }
-// @font-face {
-//   font-family: 'Lato';
-//   font-style: normal;
-//   font-weight: 400;
-//   src: local('Lato Regular'), local('Lato-Regular'), url("#{$fonts-path-lato}Lato-Regular.woff") format('woff');
-// }
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
 
 @font-face {
   font-family: "mupat";
