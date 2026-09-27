@@ -6,7 +6,7 @@ email: dev@mupat.net
 description: >-
   Personal site for Mupat
 baseurl: ""
-url: "www.mupat.net"
+url: ""
 github_username:  mupat
 
 # Build settings
