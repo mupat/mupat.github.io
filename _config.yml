@@ -1,1 +1,39 @@
-exclude:  ['sass']
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+title: Mupat
+email: dev@mupat.net
+description: >-
+  Personal site for Mupat
+baseurl: ""
+url: "www.mupat.net"
+github_username:  mupat
+
+# Build settings
+plugins:
+  - jekyll-remote-theme
+
+remote_theme: piazzai/cvless
+
+# author settings
+author:
+  name: Patrick Müller
+  email: dev@mupat.net
+photo: assets/files/me.jpg
+
+# profile links
+profile:
+  xing: https://www.xing.com/profiles/Patrick_Mueller320
+  github: https://github.com/mupat
+  cv: false
+
+# build settings
+permalink: pretty
+exclude:
+  - LICENSE
+  - README.md
+  - Gemfile
+  - vendor/
+
+sass:
+  sourcemap: never
